@@ -45,8 +45,7 @@ function moveToDone(taskElement) {
     h2Done.insertAdjacentElement('afterend', taskElement); // Ajoute l'élément dans la colonne "Fait"
     arrDone = [...arrDone, taskElement.textContent];
     removeValue(taskElement.textContent, toDo)
-    localStorage.setItem('')
-    console.log(arrDone + '       ' + toDo);
+    // localStorage.setItem('')
 }
 
 function removeValue(value, arr) {
