@@ -1,0 +1,58 @@
+body {
+    margin: 0 0;
+}
+
+header {
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.form__task {
+    margin: 50px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__task form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.form__task form input {
+    width: 50%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin: 0 15px;
+}
+
+.form__task button {
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: #018842;
+    color: white;
+}
+
+.form__task button:hover {
+    background-color: #006d04;
+}
+
+.section__tasks {
+    display: flex;
+    justify-content: space-around;
+}
+
+.section__tasks section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: black solid 1px;
+    border-radius: 15px;
+    width: 40%;
+    height: 70vh;
+}
