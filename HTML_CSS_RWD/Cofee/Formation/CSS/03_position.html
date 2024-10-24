@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03_Position</title>
+    <style>
+      .container {
+        width: 500px;
+        height: 500px;
+        background-color: darkmagenta;
+        position: relative;
+      }
+
+      .care {
+        width: 100px;
+        height: 100px;
+        background-color: brown;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        z-index: 1;
+        /* float: left; */
+      }
+
+      h2 {
+        position: relative;
+        z-index: 2;
+        height: 1000px;
+      }
+
+      header {
+        width: 100%;
+        height: 500px;
+        background-color: black;
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 4;
+      }
+
+      nav {
+        width: 50%;
+        height: 100px;
+        position: sticky;
+        /* différence avec fixed, fixed = bouge pas peut importe ou, sticky bouge pas tant que le parents est la puis part lorsque le parent n'est plus là */
+        top: 0;
+        right: 0;
+        background-color: azure;
+        z-index: 5;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <!-- nav en position sticky, visible et fixé sur la taille du parent -->
+        <nav>
+
+        </nav>
+    </header>
+
+    <!-- position absolute et relative absolute depend du premier -->
+    <div class="container">
+      <div class="care"></div>
+    </div>
+
+    <h2>Titre</h2>
+
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto
+      assumenda dolor excepturi voluptatum provident molestiae consequatur vel,
+      fugiat beatae porro, laboriosam neque dicta mollitia reprehenderit
+      quisquam doloribus vero repudiandae ipsum.
+    </p>
+  </body>
+</html>

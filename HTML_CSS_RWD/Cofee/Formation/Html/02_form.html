@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <!-- GET obtenir en anglais, envoi non protégé directement dans l'url -->
+
+    <!-- Post envoi de données sécurisées -->
+
+    <!-- action = page qui va être appelé à la soumission du form -->
+
+
+    <form action="" method="get">
+        <div>
+            <label for="name">Nom</label>
+            <input type="text" name="name" id="name" placeholder="EX: Jean" minlength="3" required>
+        </div>
+        <div>
+            <label for="mail">Mail</label>
+            <input type="email" name="mail" id="mail" placeholder="Email" required>
+        </div>
+        <div>
+            <label for="dateNais">Date de naissance</label>
+            <input type="date" name="dateNais" id="dateNais" required>
+        </div>
+        <div>
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div>
+            <label for="CGU">Accepter nos CGU</label>
+            <input type="checkbox" name="CGU" id="CGU">
+        </div>
+        <fieldset>
+            <legend>Choisissez votre genre</legend>
+            <!-- Pour radio fonctionnel, il faut le même nom -->
+            <label for="F">Femme</label>
+            <input type="radio" name="genre" id="F" value="1">
+
+            <label for="H">Homme</label>
+            <input type="radio" name="genre" id="H" value="0">
+        </fieldset>
+        <div>
+            <label for="parfum">Choisissez un parfum</label>
+            <select name="parfum" id="parfum">
+                <option value="chocolat">Chocolat</option>
+                <option value="vanille">Vanille</option>
+                <option value="fraise">Fraise</option>
+                <option value="citron">Citron</option>
+            </select>
+        </div>
+        <div>
+            <label for="message">Votre message</label>
+            <textarea name="message" id="message"></textarea>
+        </div>
+
+        <input type="submit" value="Envoyer" placeholder="Envoyer">
+    </form>
+</body>
+</html>

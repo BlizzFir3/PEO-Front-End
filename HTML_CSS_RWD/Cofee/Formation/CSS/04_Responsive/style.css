@@ -1,0 +1,40 @@
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+img {
+    width: 30%;
+    /* object-fit: contain; */
+}
+
+.flex div {
+    width: 30%;
+}
+
+@media all and (0px < width < 768px){
+    body {
+        background-color: burlywood;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+
+
+
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative</title>
+
+    <style>
+        html {
+            font-size: 20px;
+        }
+        /* body {
+            width: 600px;
+        } */
+
+        button {
+            margin: 100px;
+            padding: 20px;
+            font-size: 25px;
+            border: 5px dotted blue;
+        }
+
+        .margin {
+            padding: 0 5%;
+        }
+
+        nav a {
+            margin: 0 10px;
+            padding: 5px 20px;
+        }
+
+        /* Paragraphe, 16px, ordinateur taille recommandée par W3C */
+        /* Paragraphe, 14px, smartphone taille recommandée par W3C */
+
+        h2 {
+            /* font-size: 24px; */
+            font-size: 1.2rem; 
+            /* Equivaut à 1.2 fois la taille de base (html font-size) */
+
+            width: 100vw;
+            /* Prend 100% de la largeur de la page indépendemment du margin etc, donc peut dépasser*/
+        }
+
+        h3 {
+            /* font-size: 20px; */
+            font-size: 1.0rem;
+            /* Equivaut à 1.0 fois la taille de base (html font-size) */
+            /* Si 1.0em, le EM est le facteur de modification de la taille du parents */
+            /* Le REM celui de la taille de la page */
+        }
+
+        .container {
+            width: 60%;
+        }
+
+        .vh {
+            height: 100vh;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: coral;
+        }
+
+        @media all and (max-width: 1000px) {
+            h2 {
+                font-size: 20px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Unitée Relatives</h1>
+
+    <section class="margin">
+        <h2>Margin et padding</h2>
+
+        <button>Envoyer</button>
+
+        <nav>
+            <a href="">Accueil</a>
+            <a href="">Accueil</a>
+            <a href="">Accueil</a>
+            <a href="">Accueil</a>
+        </nav>
+    </section>
+
+    <section>
+        <h2>Unitée relative REM</h2>
+
+        <h3>Unité de valeur responsive</h3>
+    </section>
+
+    <section>
+        <h2>Largeur % et vw</h2>
+
+        <div class="container">
+            <h2 class="long">Titre long</h2>
+            <h2 class="court">Titre court</h2>
+
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Hauteur vh</h2>
+
+        <nav class="vh">
+            <!-- Utiliser plus souvent les vh pour la hauteur plutôt qu'en % -->
+            <a href="">Accueil</a>
+            <a href="">Accueil</a>
+            <a href="">Accueil</a>
+        </nav>
+    </section>
+
+
+</body>
+</html>

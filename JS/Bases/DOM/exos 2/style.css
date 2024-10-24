@@ -1,0 +1,14 @@
+body section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2vh 0;
+}
+
+section .exercice {
+    width: 40%;
+    margin: 2vh 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

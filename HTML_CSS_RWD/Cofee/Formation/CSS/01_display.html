@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      header {
+        height: 200px;
+        background-color: burlywood;
+      }
+
+      h2 {
+        width: 30%;
+        height: 50px;
+        text-align: center;
+      }
+
+      h2:hover {
+        transform: scale(1.5);
+      }
+
+      a {
+        display: inline-block;
+        width: 30%;
+        height: 50px;
+        text-align: center;
+      }
+
+      a:hover {
+        transform: scale(1.5);
+      }
+
+      li {
+        display: inline-block;
+        /* transition: transform 0.3s; */
+        /* Marche avec transform */
+      }
+
+      li:hover {
+        /* transform: scale(1.8); */
+        /* Se superpose par dessus le reste */
+        font-size: 40px;
+        /* Pousse les autres éléments */
+      }
+
+      .flex {
+        display: flex;
+        /* Gère tout les enfants directs */
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .flex p {
+        width: 50%;
+      }
+
+      .flex div {
+        width: 50%;
+        display: flex;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Attention au style de base de donné utilisateur -->
+
+    <header></header>
+
+    <h2>Titre</h2>
+    <h2>Titre</h2>
+
+    <a href="">Contact</a>
+    <a href="">Accueil</a>
+
+    <ul>
+      <li>Tomate</li>
+      <li>Tomate</li>
+      <li>Tomate</li>
+      <li>Tomate</li>
+    </ul>
+
+    <!-- Partie de placement, Flexbox et Grid -->
+
+    <section class="flex">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde expedita
+        nihil totam est cumque explicabo, sequi excepturi sed error reiciendis
+        inventore blanditiis at veniam ut impedit modi recusandae facere! Dicta.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde expedita
+        nihil totam est cumque explicabo, sequi excepturi sed error reiciendis
+        inventore blanditiis at veniam ut impedit modi recusandae facere! Dicta.
+      </p>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde expedita
+        nihil totam est cumque explicabo, sequi excepturi sed error reiciendis
+        inventore blanditiis at veniam ut impedit modi recusandae facere! Dicta.
+      </p>
+      <div>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde
+          expedita nihil totam est cumque explicabo, sequi excepturi sed error
+          reiciendis inventore blanditiis at veniam ut impedit modi recusandae
+          facere! Dicta.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde
+          expedita nihil totam est cumque explicabo, sequi excepturi sed error
+          reiciendis inventore blanditiis at veniam ut impedit modi recusandae
+          facere! Dicta.
+        </p>
+      </div>
+      
+    </section>
+  </body>
+</html>

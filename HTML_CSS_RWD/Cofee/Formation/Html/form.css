@@ -1,0 +1,32 @@
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+}
+
+form input {
+    padding: 15px 0;
+    color: red;
+    font-size: 20px;
+}
+
+#name {
+    background-color: burlywood;
+}
+
+input[type="email"] {
+    background-color: cyan;
+}
+
+::placeholder {
+    color: white;
+    font-size: 20px;
+}
