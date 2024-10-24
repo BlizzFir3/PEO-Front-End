@@ -5,6 +5,7 @@ let h2Todo = document.querySelector('#h2__todo');
 
 // Tableau pour stocker les tâches
 let toDo = [];
+let arrDone = [];
 
 // Gestion de l'ajout de nouvelles tâches
 formTask.addEventListener('submit', (evt) => {
@@ -31,6 +32,7 @@ formTask.addEventListener('submit', (evt) => {
             pTask.remove(); // Retire la tâche de la colonne "à faire"
             moveToDone(pTask); // Déplace la tâche dans la colonne "Fait"
         });
+        console.log(toDo);
     }
 });
 
@@ -41,4 +43,20 @@ function moveToDone(taskElement) {
     taskElement.classList.remove('pToDo'); // Enlève la classe "à faire"
     taskElement.classList.add('pDone'); // Ajoute une classe pour la tâche "Fait"
     h2Done.insertAdjacentElement('afterend', taskElement); // Ajoute l'élément dans la colonne "Fait"
+    arrDone = [...arrDone, taskElement.textContent];
+    removeValue(taskElement.textContent, toDo)
+    localStorage.setItem('')
+    console.log(arrDone + '       ' + toDo);
+}
+
+function removeValue(value, arr) {
+    for (let index = 0; index < arr.length; index++) {
+        // si la valeur à l'index actuelle vaut la valeur qu'on cherche
+        if (arr[index] === value) {
+            // supprime la valeur dans le tableau
+            arr.splice(index, 1);
+            return true;
+        }
+    }
+    return false;
 }
