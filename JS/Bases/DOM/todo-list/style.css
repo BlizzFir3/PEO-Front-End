@@ -68,3 +68,15 @@ header {
     align-items: center;
     justify-content: center;
 }
+
+.section__done p {
+    background-color: rgb(94, 177, 46);
+    color: white;
+    height: 10vh;
+    padding: 15px 0;
+    width: 80%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
