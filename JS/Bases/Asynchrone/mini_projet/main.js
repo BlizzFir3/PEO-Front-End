@@ -14,6 +14,9 @@ async function obtenirDonnées(query) {
             `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${query}` &&
                 `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}`
         );
+        if (!response.ok) {
+            throw new Error(response.status);
+        }
         const data = await response.json();
         console.log(data);
 
@@ -32,9 +35,9 @@ function displaySearch(drinks) {
         let cocktailSection = document.createElement('section');
         cocktailSection.classList.add('container__cocktail');
 
-        // Ajoute une sectionpour le nom et la description
+        // Ajoute une section pour le nom et la description
         let nameSection = document.createElement('section');
-        nameSection.classList.add('container__name')
+        nameSection.classList.add('container__name');
 
         // Ajouter un titre et une image
         let cocktailName = document.createElement('h3');
@@ -47,10 +50,10 @@ function displaySearch(drinks) {
         // Ajouter description
         let cocktailDescription = document.createElement('p');
         cocktailDescription.textContent = cocktail.strInstructions;
-        
+
         // Ajouter la section au conteneur
         resultContainer.appendChild(cocktailSection);
-        
+
         // Ajouter les éléments à la section
         cocktailSection.appendChild(cocktailImage);
         cocktailSection.appendChild(nameSection);
