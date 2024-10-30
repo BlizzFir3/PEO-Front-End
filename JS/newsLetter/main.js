@@ -1,4 +1,5 @@
-function test() {
-    console.log('ceci est un test');
-    console.log
+function toggleNewsLetter() {
+    const newsLetter = document.querySelector("#newsLetter");
+    
+    newsLetter.classList.toggle("active");
 }
