@@ -16,5 +16,16 @@ form {
 }
 
 .row {
+    width: 60%;
+}
+
+.space-around {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.w-40 {
     width: 40%;
 }
