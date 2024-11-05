@@ -63,15 +63,15 @@ body {
   margin: 0;
 }
 
-h1 {
+h2 {
   font-size: 20px;
 }
 
-h2 {
+h3 {
   font-size: 18px;
 }
 
-h1, h2, p {
+h2, h3, p {
     font-family: var(--poppins);
 }
 
@@ -184,7 +184,7 @@ h1, h2, p {
   height: 25vh;
 }
 
-.main__accueil .section__medicament h1 {
+.main__accueil .section__medicament h2 {
   font-family: var(--caviarDreams);
   font-size: 2.0rem;
 }
@@ -228,7 +228,7 @@ h1, h2, p {
   height: 25vh;
 }
 
-.main__accueil .section__partenaire h1 {
+.main__accueil .section__partenaire h2 {
   font-family: var(--caviarDreams);
   font-size: 2.0rem;
 }
@@ -467,7 +467,7 @@ footer img {
 
 /* Main */
 
-.main__partenaire h1 {
+.main__partenaire h2 {
   margin: 50px 0;
   font-family: var(--redwing);
   color: var(--muscu-black);
@@ -487,7 +487,7 @@ footer img {
   padding: 15px 20px;
 }
 
-.main__partenaire .section__partenaire section h1 {
+.main__partenaire .section__partenaire section h2 {
   color: var(--muscu-green);
   font-size: 1.6rem;
 }
