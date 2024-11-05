@@ -38,6 +38,53 @@
         </header>
 
         <main class="main__accueil">
+			<section class="section__accessibility">
+                <section class="lien__evitement">
+                    <a class="v-hidden" href="#content"
+                        >Aller au contenu principal</a
+                    >
+                    <a class="v-hidden" href="#footer">Aller au pied de page</a>
+                </section>
+                <section aria-label="Options d'accessibilité" class="A11Y">
+                    <button
+                        aria-label="augmenter la taille du texte"
+                        class="btn"
+                        onclick="zoomFont()">
+                        Aa+
+                    </button>
+                    <button
+                        aria-label="diminuer la taille du texte"
+                        class="btn"
+                        onclick="unZoomFont()">
+                        Aa-
+                    </button>
+                    <button
+                        aria-label="augmenter l'interligne"
+                        class="btn"
+                        onclick="zoomLineHeigth()">
+                        Ll+
+                    </button>
+                    <button
+                        aria-label="diminuer l'interligne"
+                        class="btn"
+                        onclick="unZoomLineHeigth()">
+                        Ll-
+                    </button>
+                    <button
+                        id="btn-dys"
+                        aria-label="Changer la police en Dyslexia"
+                        class="btn"
+                        onclick="setDysFont()">
+                        Police Dys
+                    </button>
+                    <button
+                        aria-label="remettre les options de base"
+                        class="btn"
+                        onclick="reset()">
+                        X
+                    </button>
+                </section>
+            </section>
             <section class="section__description">
                 <section>
                     <img src="img/doliprane.png" alt="Boite de medicament - Doliprane" />

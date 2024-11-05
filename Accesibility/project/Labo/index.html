@@ -1,128 +1,197 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Labo - Accueil</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <section class="nav__menu">
-        <div>
-          <a href="index.html">
-            <img src="img/logo.svg" alt="Logo - Bouton de retour à la page d'accueil" title="Page d'accueil" />
-          </a>
-        </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Labo - Accueil</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <section class="nav__menu">
+                <section>
+                    <a href="index.html">
+                        <img
+                            src="img/logo.svg"
+                            alt="Logo - Bouton de retour à la page d'accueil"
+                            title="Page d'accueil" />
+                    </a>
+                </section>
 
-        <nav>
-          <ul>
-            <li><a href="index.html" title="Page d'accueil">Accueil</a></li>
-            <li><a href="medicament.html" title="Page Médicament">Médicament</a></li>
-          </ul>
-        </nav>
-      </section>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="index.html" title="Page d'accueil"
+                                >Accueil</a
+                            >
+                        </li>
+                        <li>
+                            <a href="medicament.html" title="Page Médicament"
+                                >Médicament</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </section>
 
-      <section class="banner" title="banner">
-        <h1>Médicaments</h1>
-      </section>
-        <div class="nav__burger">
-          <div class="burger-btn__line burger-btn__top"></div>
-          <div class="burger-btn__line burger-btn__center"></div>
-          <div class="burger-btn__line burger-btn__bottom"></div>
-        </div>
-    </header>
+            <section class="banner" title="banner">
+                <h1>Médicaments</h1>
+            </section>
+            <section class="nav__burger">
+                <section class="burger-btn__line burger-btn__top"></section>
+                <section class="burger-btn__line burger-btn__center"></section>
+                <section class="burger-btn__line burger-btn__bottom"></section>
+            </section>
+        </header>
 
-    <main class="main__accueil">
-      <section class="section__medicament">
-        <section>
-          <img src="img/xanax.png" alt="Boite de medicament - Xanax" />
-          <h2>Xanax</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
-            maiores tenetur, illo, eos hic voluptatum commodi quam quisquam quod
-            fugiat error illum corrupti, ducimus asperiores reiciendis fuga odio
-            cupiditate ex.
-          </p>
-          <a href="">En savoir plus</a>
-        </section>
-        <section>
-          <img src="img/doliprane.png" alt="Boite de medicament - Doliprane" />
-          <h2>Doliprane</h2>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni
-            maiores tenetur, illo, eos hic voluptatum commodi quam quisquam quod
-            fugiat error illum corrupti, ducimus asperiores reiciendis fuga odio
-            cupiditate ex.
-          </p>
-          <a href="">En savoir plus</a>
-        </section>
-      </section>
+        <main class="main__accueil">
+            <section class="section__accessibility">
+                <section class="lien__evitement">
+                    <a class="v-hidden" href="#content"
+                        >Aller au contenu principal</a
+                    >
+                    <a class="v-hidden" href="#footer">Aller au pied de page</a>
+                </section>
+                <section aria-label="Options d'accessibilité" class="A11Y">
+                    <button
+                        aria-label="augmenter la taille du texte"
+                        class="btn"
+                        onclick="zoomFont()">
+                        Aa+
+                    </button>
+                    <button
+                        aria-label="diminuer la taille du texte"
+                        class="btn"
+                        onclick="unZoomFont()">
+                        Aa-
+                    </button>
+                    <button
+                        aria-label="augmenter l'interligne"
+                        class="btn"
+                        onclick="zoomLineHeigth()">
+                        Ll+
+                    </button>
+                    <button
+                        aria-label="diminuer l'interligne"
+                        class="btn"
+                        onclick="unZoomLineHeigth()">
+                        Ll-
+                    </button>
+                    <button
+                        id="btn-dys"
+                        aria-label="Changer la police en Dyslexia"
+                        class="btn"
+                        onclick="setDysFont()">
+                        Police Dys
+                    </button>
+                    <button
+                        aria-label="remettre les options de base"
+                        class="btn"
+                        onclick="reset()">
+                        X
+                    </button>
+                </section>
+            </section>
+            <section class="section__medicament">
+                <section>
+                    <img
+                        src="img/xanax.png"
+                        alt="Boite de medicament - Xanax" />
+                    <h2>Xanax</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Magni maiores tenetur, illo, eos hic voluptatum
+                        commodi quam quisquam quod fugiat error illum corrupti,
+                        ducimus asperiores reiciendis fuga odio cupiditate ex.
+                    </p>
+                    <a href="">En savoir plus</a>
+                </section>
+                <section>
+                    <img
+                        src="img/doliprane.png"
+                        alt="Boite de medicament - Doliprane" />
+                    <h2>Doliprane</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Magni maiores tenetur, illo, eos hic voluptatum
+                        commodi quam quisquam quod fugiat error illum corrupti,
+                        ducimus asperiores reiciendis fuga odio cupiditate ex.
+                    </p>
+                    <a href="">En savoir plus</a>
+                </section>
+            </section>
 
-      <h2 class="separator__title">Actualités des partenaires</h2>
-      <section class="section__partenaire">
-        <section>
-          <img src="img/salle-ded-sport.jpg" alt="" />
-          <h2>Sport Academy</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            iusto modi quidem, harum cupiditate doloremque repellendus, magnam,
-            facere enim quasi recusandae ducimus laborum. Commodi rem
-            voluptatum, perferendis ea vitae molestias.
-          </p>
-          <a href="partenaire.html">Voir plus</a>
-        </section>
-        <section>
-          <img src="" alt="" />
-          <h2>Partenaire</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            iusto modi quidem, harum cupiditate doloremque repellendus, magnam,
-            facere enim quasi recusandae ducimus laborum. Commodi rem
-            voluptatum, perferendis ea vitae molestias.
-          </p>
-          <a href="">Voir plus</a>
-        </section>
-        <section>
-          <img src="" alt="" />
-          <h2>Partenaire</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            iusto modi quidem, harum cupiditate doloremque repellendus, magnam,
-            facere enim quasi recusandae ducimus laborum. Commodi rem
-            voluptatum, perferendis ea vitae molestias.
-          </p>
-          <a href="">Voir plus</a>
-        </section>
-        <section>
-          <img src="" alt="" />
-          <h2>Partenaire</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            iusto modi quidem, harum cupiditate doloremque repellendus, magnam,
-            facere enim quasi recusandae ducimus laborum. Commodi rem
-            voluptatum, perferendis ea vitae molestias.
-          </p>
-          <a href="">Voir plus</a>
-        </section>
-      </section>
-    </main>
-    <footer>
-      <address>
-        <h3>Adresse</h3>
-        <p>17 Avenue du Breuil</p>
-      </address>
-      <section class="footer__reseaux">
-        <h3>Réseaux</h3>
-        <div>
-          <a href="">
-            <img src="img/facebook.png" alt="Visitez le Facebook" />
-          </a>
-          <a href="">
-            <img src="img/linkedin.png" alt="Visitez la page Linkedin" />
-          </a>
-        </div>
-      </section>
-    </footer>
-  </body>
+            <h2 class="separator__title">Articles qui pourrait vous interesser</h2>
+            <section class="section__partenaire">
+                <section>
+                    <img src="img/salle-ded-sport.jpg" alt="" />
+                    <h2>Article sur le sport</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Repellat iusto modi quidem, harum cupiditate doloremque
+                        repellendus, magnam, facere enim quasi recusandae
+                        ducimus laborum. Commodi rem voluptatum, perferendis ea
+                        vitae molestias.
+                    </p>
+                    <a href="">Voir plus</a>
+                </section>
+                <section>
+                    <img src="" alt="" />
+                    <h2>Article</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Repellat iusto modi quidem, harum cupiditate doloremque
+                        repellendus, magnam, facere enim quasi recusandae
+                        ducimus laborum. Commodi rem voluptatum, perferendis ea
+                        vitae molestias.
+                    </p>
+                    <a href="">Voir plus</a>
+                </section>
+                <section>
+                    <img src="" alt="" />
+                    <h2>Article</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Repellat iusto modi quidem, harum cupiditate doloremque
+                        repellendus, magnam, facere enim quasi recusandae
+                        ducimus laborum. Commodi rem voluptatum, perferendis ea
+                        vitae molestias.
+                    </p>
+                    <a href="">Voir plus</a>
+                </section>
+                <section>
+                    <img src="" alt="" />
+                    <h2>Article</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Repellat iusto modi quidem, harum cupiditate doloremque
+                        repellendus, magnam, facere enim quasi recusandae
+                        ducimus laborum. Commodi rem voluptatum, perferendis ea
+                        vitae molestias.
+                    </p>
+                    <a href="">Voir plus</a>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <address>
+                <h3>Adresse</h3>
+                <p>17 Avenue du Breuil</p>
+            </address>
+            <section class="footer__reseaux">
+                <h3>Réseaux</h3>
+                <section>
+                    <a href="">
+                        <img src="img/facebook.png" alt="Visitez le Facebook" />
+                    </a>
+                    <a href="">
+                        <img
+                            src="img/linkedin.png"
+                            alt="Visitez la page Linkedin" />
+                    </a>
+                </section>
+            </section>
+        </footer>
+    </body>
 </html>
