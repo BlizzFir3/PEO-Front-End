@@ -1,82 +1,530 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les tableaux | Blog Dawan </title>
-</head>
-<body>
-    <header>
-        <h1>Les tableaux en accessibilité</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Tableau simple</h2>
-            <table aria-describedby="table-resume">
-                <caption>Avantages de l'Iphone <a href="#table-resume">Voir résumé</a></caption>
-                <thead>
-                    <tr>
-                        <td></td>
-                        <th scope="col">Audition</th>
-                        <th scope="col">Mobilité</th>
-                        <th scope="col">Séniors</th>                
-                    </tr>
-                </thead>
-                <tbody>
-                   <tr>
-                      <th scope="row">Zoom sur le texte</th>
-                      <td>X</td>
-                      <td>V</td>
-                      <td>V</td>
-                   </tr>
-                   <tr>
-                    <th scope="row">Text to speech</th>
-                    <td>X</td>
-                    <td>V</td>
-                    <td>V</td>
-                 </tr>
-                 <tr>
-                    <th scope="row">Dark mode</th>
-                    <td>X</td>
-                    <td>V</td>
-                    <td>V</td>
-                 </tr>
-                </tbody>
-            </table>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Les tableaux | Blog Dawan</title>
+    </head>
+    <body>
+        <header>
+            <h1>Les tableaux en accessibilité</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Tableau simple</h2>
+                <table aria-describedby="table-resume">
+                    <caption>
+                        Avantages de l'Iphone
+                        <a href="#table-resume">Voir résumé</a>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <th scope="col">Audition</th>
+                            <th scope="col">Mobilité</th>
+                            <th scope="col">Séniors</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Zoom sur le texte</th>
+                            <td>X</td>
+                            <td>V</td>
+                            <td>V</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Text to speech</th>
+                            <td>X</td>
+                            <td>V</td>
+                            <td>V</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Dark mode</th>
+                            <td>X</td>
+                            <td>V</td>
+                            <td>V</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-            <details id="table-resume">
-                <summary>Résumé</summary>
-                <p>L'iphone propose les fonctionnalité d'accessibilité:</p>
-                <ul>
-                    <li>Vision : zoom sur le texte, ...</li>
-                    <li>Audition : Text to speech ...</li>
-                    <li>Séniors : zoom sur le texte, dark mode</li>
-                </ul>
-            </details>
-        </section>
+                <details id="table-resume">
+                    <summary>Résumé</summary>
+                    <p>L'iphone propose les fonctionnalité d'accessibilité:</p>
+                    <ul>
+                        <li>Vision : zoom sur le texte, ...</li>
+                        <li>Audition : Text to speech ...</li>
+                        <li>Séniors : zoom sur le texte, dark mode</li>
+                    </ul>
+                </details>
+            </section>
 
-        <section>
-            <h2>Orange</h2>
-            <table class="manual rs_content">
-              <thead>
-              <tr>
-                <th style="vertical-align: middle; width: 40%;" scope="col">
-                  <h3 class="pb-0"><a href="https://boutique.orange.fr/mobile/details/fairphone-4-5g-gris-128go?MCO=OFR" target="_blank" rel="noopener"><span class="sync_sent" id="sync240-11"><span class="sync_word" id="sync237-11">Fairphone</span> <span class="sync_word" id="sync238-11">4</span> <span class="sync_word" id="sync239-11">5G</span> </span></a></h3>
-                </th>
-                <th class="" style="text-align: center; vertical-align: middle; min-width: 61px; width: 15%;" scope="col">
-                  <p style="display: none;">Vision</p>
-                  <img class="fr-fic fr-dib max-w-mobile" style="width: 40px;" src="https://ps-cdn1.imgix.net/uploads/1610/images/da57e40ebbd7cc2ad797b9f176680588351c4595.png?auto=format%2Ccompress" alt="Vision" data-srcset="[40]" data-width="40"></th>
-                <th class="" style="text-align: center; vertical-align: middle; min-width: 61px; width: 15%;" scope="col">
-                  <p style="display: none;">L'audition</p>
-                  <img class="fr-fic fr-dib max-w-mobile" style="width: 40px;" src="https://ps-cdn1.imgix.net/uploads/1610/images/0c547e49b54e807707f992eb290a16ff4e72ee8d.png?auto=format%2Ccompress" alt="L'audition" data-srcset="[40]" data-width="40">
-                </th>
-                </tr>
-            </thead>
-
-        </table>
-
-
-    </main>
-
-</body>
+            <section>
+                <h2>Orange</h2>
+                <table class="manual rs_content">
+                    <thead>
+                        <tr>
+                            <th
+                                style="vertical-align: middle; width: 40%"
+                                scope="col">
+                                <h3 class="pb-0">
+                                    <a
+                                        href="https://boutique.orange.fr/mobile/details/fairphone-4-5g-gris-128go?MCO=OFR"
+                                        target="_blank"
+                                        rel="noopener"
+                                        ><span class="sync_sent" id="sync240-11"
+                                            ><span
+                                                class="sync_word"
+                                                id="sync237-11"
+                                                >Fairphone</span
+                                            ><span
+                                                class="sync_word"
+                                                id="sync238-11"
+                                                >4</span
+                                            >
+                                            <span
+                                                class="sync_word"
+                                                id="sync239-11"
+                                                >5G</span
+                                            >
+                                        </span></a
+                                    >
+                                </h3>
+                            </th>
+                            <th
+                                class=""
+                                style="
+                                    text-align: center;
+                                    vertical-align: middle;
+                                    min-width: 61px;
+                                    width: 15%;
+                                "
+                                scope="col">
+                                <p style="display: none">Vision</p>
+                                <img
+                                    class="fr-fic fr-dib max-w-mobile"
+                                    style="width: 40px"
+                                    src="https://ps-cdn1.imgix.net/uploads/1610/images/da57e40ebbd7cc2ad797b9f176680588351c4595.png?auto=format%2Ccompress"
+                                    alt="Vision"
+                                    data-srcset="[40]"
+                                    data-width="40" />
+                            </th>
+                            <th
+                                class=""
+                                style="
+                                    text-align: center;
+                                    vertical-align: middle;
+                                    min-width: 61px;
+                                    width: 15%;
+                                "
+                                scope="col">
+                                <p style="display: none">L'audition</p>
+                                <img
+                                    class="fr-fic fr-dib max-w-mobile"
+                                    style="width: 40px"
+                                    src="https://ps-cdn1.imgix.net/uploads/1610/images/0c547e49b54e807707f992eb290a16ff4e72ee8d.png?auto=format%2Ccompress"
+                                    alt="L'audition"
+                                    data-srcset="[40]"
+                                    data-width="40" />
+                            </th>
+                            <th
+                                class=""
+                                style="
+                                    text-align: center;
+                                    vertical-align: middle;
+                                    min-width: 61px;
+                                    width: 15%;
+                                "
+                                scope="col">
+                                <p style="display: none">S&eacute;niors</p>
+                                <img
+                                    class="fr-fic fr-dib max-w-mobile"
+                                    style="width: 40px"
+                                    src="https://ps-cdn1.imgix.net/uploads/1610/images/08a5ac9b05dc35174932f6b1756ba4ba99f16f26.png?auto=format%2Ccompress"
+                                    alt="S&eacute;niors"
+                                    data-srcset="[40]"
+                                    data-width="40" />
+                            </th>
+                            <th
+                                class=""
+                                style="
+                                    text-align: center;
+                                    vertical-align: middle;
+                                    min-width: 61px;
+                                    width: 15%;
+                                "
+                                scope="col">
+                                <p style="display: none">
+                                    La pr&eacute;hension
+                                </p>
+                                <img
+                                    class="fr-fic fr-dib max-w-mobile"
+                                    style="width: 40px"
+                                    src="https://ps-cdn1.imgix.net/uploads/1610/images/993cbcd6901a2ef024df04f91a49a4e58988e75d.png?auto=format%2Ccompress"
+                                    alt="La pr&eacute;hension"
+                                    data-srcset="[40]"
+                                    data-width="40" />
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th style="width: 40%" scope="row">
+                                Grossir la taille des
+                                <span class="nbsp"
+                                    >caract&egrave;res <sup>(1)</sup></span
+                                >
+                            </th>
+                            <td style="text-align: center; width: 15%">
+                                <span class="sync_sent" id="sync261-11"
+                                    ><span class="sync_word" id="sync259-11"
+                                        >adapt&eacute;</span
+                                    >
+                                    <span class="sync_word" id="sync260-11"
+                                        >&#10003;</span
+                                    ></span
+                                >
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <p class="sr-only">
+                                    <span class="sync_sent" id="sync264-11"
+                                        ><span class="sync_word" id="sync262-11"
+                                            >non</span
+                                        >
+                                        <span class="sync_word" id="sync263-11"
+                                            >inclus</span
+                                        ></span
+                                    >
+                                </p>
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <p class="sr-only">
+                                    <span class="sync_sent" id="sync267-11"
+                                        ><span class="sync_word" id="sync265-11"
+                                            >non</span
+                                        >
+                                        <span class="sync_word" id="sync266-11"
+                                            >inclus</span
+                                        ></span
+                                    >
+                                </p>
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <p class="sr-only">
+                                    <span class="sync_sent" id="sync270-11"
+                                        ><span class="sync_word" id="sync268-11"
+                                            >non</span
+                                        >
+                                        <span class="sync_word" id="sync269-11"
+                                            >inclus</span
+                                        ></span
+                                    >
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="width: 40%" scope="row">
+                                Synth&egrave;se vocale <sup>(2)</sup> dont
+                                pr&eacute;sentation vocale de la personne qui
+                                appelle
+                            </th>
+                            <td style="text-align: center; width: 15%">
+                                <span class="sync_sent" id="sync287-11"
+                                    ><span class="sync_word" id="sync285-11"
+                                        >adapt&eacute;</span
+                                    >
+                                    <span class="sync_word" id="sync286-11"
+                                        >&#10003;</span
+                                    ></span
+                                >
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <p class="sr-only">
+                                    <span class="sync_sent" id="sync290-11"
+                                        ><span class="sync_word" id="sync288-11"
+                                            >non</span
+                                        >
+                                        <span class="sync_word" id="sync289-11"
+                                            >inclus</span
+                                        ></span
+                                    >
+                                </p>
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <span class="sync_sent" id="sync293-11"
+                                    ><span class="sync_word" id="sync291-11"
+                                        >adapt&eacute;</span
+                                    >
+                                    <span class="sync_word" id="sync292-11"
+                                        >&#10003;</span
+                                    ></span
+                                >
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <p class="sr-only">
+                                    <span class="sync_sent" id="sync296-11"
+                                        ><span class="sync_word" id="sync294-11"
+                                            >non</span
+                                        >
+                                        <span class="sync_word" id="sync295-11"
+                                            >inclus</span
+                                        ></span
+                                    >
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="width: 40%" scope="row">
+                                Commande vocale <sup>(3)</sup> y compris pour
+                                les num&eacute;ros
+                            </th>
+                            <td style="text-align: center; width: 15%">
+                                <span class="sync_sent" id="sync310-11"
+                                    ><span class="sync_word" id="sync308-11"
+                                        >adapt&eacute;</span
+                                    >
+                                    <span class="sync_word" id="sync309-11"
+                                        >&#10003;</span
+                                    ></span
+                                >
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <p class="sr-only">
+                                    <span class="sync_sent" id="sync313-11"
+                                        ><span class="sync_word" id="sync311-11"
+                                            >non</span
+                                        >
+                                        <span class="sync_word" id="sync312-11"
+                                            >inclus</span
+                                        ></span
+                                    >
+                                </p>
+                            </td>
+                            <td style="text-align: center">
+                                <span class="sync_sent" id="sync316-11"
+                                    ><span class="sync_word" id="sync314-11"
+                                        >adapt&eacute;</span
+                                    >
+                                    <span class="sync_word" id="sync315-11"
+                                        >&#10003;</span
+                                    ></span
+                                >
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <span class="sync_sent" id="sync319-11"
+                                    ><span class="sync_word" id="sync317-11"
+                                        >adapt&eacute;</span
+                                    >
+                                    <span class="sync_word" id="sync318-11"
+                                        >&#10003;</span
+                                    ></span
+                                >
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="width: 40%" scope="row">
+                                Possibilit&eacute; de mettre des sonneries
+                                personnalis&eacute;es
+                            </th>
+                            <td style="text-align: center; width: 15%">
+                                <span class="sync_sent" id="sync329-11"
+                                    ><span class="sync_word" id="sync327-11"
+                                        >adapt&eacute;</span
+                                    >
+                                    <span class="sync_word" id="sync328-11"
+                                        >&#10003;</span
+                                    ></span
+                                >
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <p class="sr-only">
+                                    <span class="sync_sent" id="sync332-11"
+                                        ><span class="sync_word" id="sync330-11"
+                                            >non</span
+                                        >
+                                        <span class="sync_word" id="sync331-11"
+                                            >inclus</span
+                                        ></span
+                                    >
+                                </p>
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <span class="sync_sent" id="sync335-11"
+                                    ><span class="sync_word" id="sync333-11"
+                                        >adapt&eacute;</span
+                                    >
+                                    <span class="sync_word" id="sync334-11"
+                                        >&#10003;</span
+                                    ></span
+                                >
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <p class="sr-only">
+                                    <span class="sync_sent" id="sync338-11"
+                                        ><span class="sync_word" id="sync336-11"
+                                            >non</span
+                                        >
+                                        <span class="sync_word" id="sync337-11"
+                                            >inclus</span
+                                        ></span
+                                    >
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="width: 40%" scope="row">
+                                Identification visuelle des personnes qui
+                                appellent
+                            </th>
+                            <td style="text-align: center; width: 15%">
+                                <p class="sr-only">
+                                    <span class="sync_sent" id="sync348-11"
+                                        ><span class="sync_word" id="sync346-11"
+                                            >non</span
+                                        >
+                                        <span class="sync_word" id="sync347-11"
+                                            >inclus</span
+                                        ></span
+                                    >
+                                </p>
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <span class="sync_sent" id="sync351-11"
+                                    ><span class="sync_word" id="sync349-11"
+                                        >adapt&eacute;</span
+                                    >
+                                    <span class="sync_word" id="sync350-11"
+                                        >&#10003;</span
+                                    ></span
+                                >
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <span class="sync_sent" id="sync354-11"
+                                    ><span class="sync_word" id="sync352-11"
+                                        >adapt&eacute;</span
+                                    >
+                                    <span class="sync_word" id="sync353-11"
+                                        >&#10003;</span
+                                    ></span
+                                >
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <p class="sr-only">
+                                    <span class="sync_sent" id="sync357-11"
+                                        ><span class="sync_word" id="sync355-11"
+                                            >non</span
+                                        >
+                                        <span class="sync_word" id="sync356-11"
+                                            >inclus</span
+                                        ></span
+                                    >
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="width: 40%" scope="row">
+                                Cam&eacute;ra sur le devant
+                            </th>
+                            <td style="text-align: center; width: 15%">
+                                <p class="sr-only">
+                                    <span class="sync_sent" id="sync365-11"
+                                        ><span class="sync_word" id="sync363-11"
+                                            >non</span
+                                        >
+                                        <span class="sync_word" id="sync364-11"
+                                            >inclus</span
+                                        ></span
+                                    >
+                                </p>
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <span class="sync_sent" id="sync368-11"
+                                    ><span class="sync_word" id="sync366-11"
+                                        >adapt&eacute;</span
+                                    >
+                                    <span class="sync_word" id="sync367-11"
+                                        >&#10003;</span
+                                    ></span
+                                >
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <span class="sync_sent" id="sync371-11"
+                                    ><span class="sync_word" id="sync369-11"
+                                        >adapt&eacute;</span
+                                    >
+                                    <span class="sync_word" id="sync370-11"
+                                        >&#10003;</span
+                                    ></span
+                                >
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <p class="sr-only">
+                                    <span class="sync_sent" id="sync374-11"
+                                        ><span class="sync_word" id="sync372-11"
+                                            >non</span
+                                        >
+                                        <span class="sync_word" id="sync373-11"
+                                            >inclus</span
+                                        ></span
+                                    >
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="width: 40%" scope="row">
+                                &Eacute;v&eacute;nements signal&eacute;s par des
+                                flash lumineux
+                            </th>
+                            <td style="text-align: center; width: 15%">
+                                <p class="sr-only">
+                                    <span class="sync_sent" id="sync384-11"
+                                        ><span class="sync_word" id="sync382-11"
+                                            >non</span
+                                        >
+                                        <span class="sync_word" id="sync383-11"
+                                            >inclus</span
+                                        ></span
+                                    >
+                                </p>
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <span class="sync_sent" id="sync387-11"
+                                    ><span class="sync_word" id="sync385-11"
+                                        >adapt&eacute;</span
+                                    >
+                                    <span class="sync_word" id="sync386-11"
+                                        >&#10003;</span
+                                    ></span
+                                >
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <span class="sync_sent" id="sync390-11"
+                                    ><span class="sync_word" id="sync388-11"
+                                        >adapt&eacute;</span
+                                    >
+                                    <span class="sync_word" id="sync389-11"
+                                        >&#10003;</span
+                                    ></span
+                                >
+                            </td>
+                            <td style="text-align: center; width: 15%">
+                                <p class="sr-only">
+                                    <span class="sync_sent" id="sync393-11"
+                                        ><span class="sync_word" id="sync391-11"
+                                            >non</span
+                                        >
+                                        <span class="sync_word" id="sync392-11"
+                                            >inclus</span
+                                        ></span
+                                    >
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer>
+            <p>Copyrights 2024</p>
+        </footer>
+    </body>
 </html>

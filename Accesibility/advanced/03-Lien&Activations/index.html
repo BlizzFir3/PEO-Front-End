@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet" />
+        <title>Liens et Actions</title>
+        <link rel="stylesheet" href="assets/styles.css" />
+    </head>
+
+    <body style="font-size: 1rem; line-height: 1.5rem">
+        <!--Liens d'evitement-->
+        <a class="v-hidden" href="#content">Aller au contenu principal</a>
+        <a class="v-hidden" href="#footer">Aller au pied de page</a>
+
+        <!-- Options d'A11Y -->
+        <div aria-label="Options d'accessibilité">
+            <button
+                aria-label="augmenter la taille du texte"
+                class="btn"
+                onclick="zoomFont()">
+                Aa+
+            </button>
+            <button
+                aria-label="diminuer la taille du texte"
+                class="btn"
+                onclick="unZoomFont()">
+                Aa-
+            </button>
+            <button
+                aria-label="augmenter l'interligne"
+                class="btn"
+                onclick="zoomLineHeigth()">
+                Ll+
+            </button>
+            <button
+                aria-label="diminuer l'interligne"
+                class="btn"
+                onclick="unZoomLineHeigth()">
+                Ll-
+            </button>
+            <button
+                id="btn-dys"
+                aria-label="Changer la police en Dyslexia"
+                class="btn"
+                onclick="setDysFont()">
+                Police Dys
+            </button>
+            <button
+                aria-label="ajouter du contraste de couleur"
+                class="btn"
+                onclick="setContrast()">
+                Contraste
+            </button>
+            <button
+                aria-label="remettre les options de base"
+                class="btn"
+                onclick="reset()">
+                X
+            </button>
+        </div>
+
+        <!--Breadcrumb (fil d'arianne)-->
+        <nav class="breadcrumb">
+            <ol>
+                <li><a href="#">RGAA guide</a></li>
+                <li><a href="#">Règles</a></li>
+                <li><a href="#" aria-current="page">Les liens</a></li>
+            </ol>
+        </nav>
+        <!--Navigation principal -->
+        <!--Balise pour les navigations principales, secondaires...-->
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Accessibilité</a></li>
+                <!--Dropdown-->
+                <li class="drop-container">
+                    <a href="#dropdown" class="drop-text">
+                        Autres
+                        <span
+                            aria-label="Ouvrir le menu déroulant"
+                            class="material-icons"
+                            >arrow_drop_down</span
+                        >
+                    </a>
+                    <ul id="dropdown" class="dropdown">
+                        <li><a href="#">Sous lien 1</a></li>
+                        <li><a href="#">Sous lien 2</a></li>
+                        <li><a href="#">Sous lien 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!--Navigation segondaire -->
+        <header>
+            <h1>Notre Super titre accessible</h1>
+        </header>
+
+        <!-- Contenu principal de la page -->
+        <main id="content">
+            <article aria-labelledby="super">
+                <h2 id="super">Un super contenu</h2>
+                <p>
+                    Si vous aimez la photographie d'art et l'esprit zen, jetez
+                    un œil sur le site de ce photographe à Palaiseau, en Essonne
+                    (France).
+                </p>
+
+                <!--Section pour lister des avantages-->
+                <section>
+                    <h3>Tous les avantages</h3>
+                    <p>Ol pour les listes ordonnées</p>
+                    <ol>
+                        <li>Avantage 1</li>
+                        <li>Avantage 2</li>
+                        <li>Avantage 3</li>
+                        <li>Avantage 4</li>
+                    </ol>
+                </section>
+
+                <!--Glossaire pour les definitions-->
+                <section>
+                    <h3>Glossaire</h3>
+                    <p>Dl, Dt, Dd sont des listes de definitions</p>
+                    <ul>
+                        <li>dl: englobe une liste de termes et définitions</li>
+                        <li>dt: définit un terme ou un concept</li>
+                        <li>
+                            dd: Suis le dt et contient la definition de celui-ci
+                        </li>
+                    </ul>
+                    <dl>
+                        <dt>Terme 1</dt>
+                        <dd>definition du terme 1</dd>
+
+                        <dt>Terme 2</dt>
+                        <dd>definition du terme 2</dd>
+
+                        <dt>Terme 3</dt>
+                        <dd>definition du terme 3</dd>
+                    </dl>
+                </section>
+
+                <!-- Section pour des avis et citations -->
+                <section>
+                    <h2>Avis</h2>
+                    <figure>
+                        <blockquote cite="www.url-origin-citation">
+                            c'est vraiment le meilleur achat de ma vie !!
+                        </blockquote>
+                        <figcaption>
+                            Mon ami,
+                            <cite> <a href="google.avis">Google avis</a> </cite>
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Mike Tyson est super content de son offre :
+                        <q>Je ne changerai plus jamais !</q>
+                    </p>
+                </section>
+            </article>
+
+            <!-- Article pour parler des langues -->
+            <article aria-labelledby="lang-title">
+                <h2 id="lang-title">Les langues</h2>
+                <!-- Section pour la langue anglaise -->
+                <section aria-labelledby="sec-en">
+                    <h3 id="sec-en">L'anglais</h3>
+                    <div lang="en">
+                        <p>I speack english very well</p>
+                        <p>Bryan is in the kitchen</p>
+                        <p>Everything is okay ?</p>
+                    </div>
+                </section>
+            </article>
+
+            <!--Barre latérale pour des informations supplémentaires-->
+
+            <aside>
+                <p>Vous aimeriez peut être aussi découvrir .....</p>
+                <p>Contactez-moi :</p>
+                <a
+                    aria-label="Télephoner moi au 0909090909"
+                    href="tel:0909090909"
+                    >0909090909</a
+                >
+                <br />
+                <a
+                    aria-label="Envoyez moi un message sur l'adresse john@doe.fr"
+                    href="mailto:john@doe.fr"
+                    >john@doe.fr</a
+                >
+            </aside>
+        </main>
+
+        <!-- Pied de la page contenant des liens -->
+        <footer id="footer">
+            <nav>
+                <ul>
+                    <li><a href="#">Mention légales</a></li>
+                    <li><a href="#">Plan du site</a></li>
+                    <li>
+                        <a href="#">
+                            <span
+                                aria-label="Contacter un conseillé"
+                                class="material-icons"
+                                >support_agent</span
+                            >
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+
+        <!-- Lien vers le fichier JavaScript -->
+        <script src="assets/index.js"></script>
+    </body>
+</html>

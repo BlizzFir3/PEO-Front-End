@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap");
+@font-face {
+  src: url("fonts/dfa/Accessible-DfA-Regular.ttf"),
+    url("fonts/dfa/Accessible-DfA-Regular.otf")
+      format("opentype");
+  font-family: "Dfa";
+}
+
+* {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: solid #ff8034 2px;
+}
+
+:root {
+  --main: #c28800;
+  --secondary: #2f9b9b;
+  --bg: #DDD
+}
+
+.contrast {
+  --main : #7b2c22;
+  --secondary: #34436A;
+  --bg: white
+}
+
+.dyslexia {
+  font-family: "Dfa", "Atkinson Hyperlegible", Arial, sans-serif;
+}
+
+body {
+  font-size: 1rem;
+  background: var(--bg);
+  font-family: "Atkinson Hyperlegible", Arial, sans-serif;
+}
+
+.v-hidden {
+  transform: translate(-1000px);
+  transition: 0.3s ease;
+  display: block;
+}
+
+.v-hidden:focus {
+  transform: translate(0);
+}
+
+.menu > ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.menu > ul > li > * {
+  display: block;
+  color: var(--main);
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+}
+
+a:link {
+  color: var(--secondary);
+}
+
+a:hover {
+  color: red;
+}
+
+.menu > ul > li > *:hover {
+  background: #d8d893;
+}
+.menu > ul > li.drop-container > .dropdown {
+  display: none;
+  margin: 10px;
+  border: solid black 2px;
+  transition: all 300ms 1s ease;
+  overflow: hidden;
+}
+.menu > ul > li.drop-container:hover > .dropdown,
+.menu > ul > li.drop-container:focus-within > .dropdown {
+  display: block;
+  transition: all 300ms 1s ease;
+}
+
+.breadcrumb {
+  background-color: antiquewhite;
+}
+
+.breadcrumb ol {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.breadcrumb li:not(:last-child):after {
+  content: ">";
+  margin-left: 5px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+}
+
+.breadcrumb a[aria-current="page"] {
+  text-decoration: solid 1px;
+  color: var(--main);
+}
+
+#footer nav ul {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  list-style: none;
+}
+.btn {
+  background-color: black;
+  color: white;
+  padding: .5rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
