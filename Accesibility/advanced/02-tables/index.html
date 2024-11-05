@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les tableaux | Blog Dawan </title>
+</head>
+<body>
+    <header>
+        <h1>Les tableaux en accessibilité</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Tableau simple</h2>
+            <table aria-describedby="table-resume">
+                <caption>Avantages de l'Iphone <a href="#table-resume">Voir résumé</a></caption>
+                <thead>
+                    <tr>
+                        <td></td>
+                        <th scope="col">Audition</th>
+                        <th scope="col">Mobilité</th>
+                        <th scope="col">Séniors</th>                
+                    </tr>
+                </thead>
+                <tbody>
+                   <tr>
+                      <th scope="row">Zoom sur le texte</th>
+                      <td>X</td>
+                      <td>V</td>
+                      <td>V</td>
+                   </tr>
+                   <tr>
+                    <th scope="row">Text to speech</th>
+                    <td>X</td>
+                    <td>V</td>
+                    <td>V</td>
+                 </tr>
+                 <tr>
+                    <th scope="row">Dark mode</th>
+                    <td>X</td>
+                    <td>V</td>
+                    <td>V</td>
+                 </tr>
+                </tbody>
+            </table>
+
+            <details id="table-resume">
+                <summary>Résumé</summary>
+                <p>L'iphone propose les fonctionnalité d'accessibilité:</p>
+                <ul>
+                    <li>Vision : zoom sur le texte, ...</li>
+                    <li>Audition : Text to speech ...</li>
+                    <li>Séniors : zoom sur le texte, dark mode</li>
+                </ul>
+            </details>
+        </section>
+
+        <section>
+            <h2>Orange</h2>
+            <table class="manual rs_content">
+              <thead>
+              <tr>
+                <th style="vertical-align: middle; width: 40%;" scope="col">
+                  <h3 class="pb-0"><a href="https://boutique.orange.fr/mobile/details/fairphone-4-5g-gris-128go?MCO=OFR" target="_blank" rel="noopener"><span class="sync_sent" id="sync240-11"><span class="sync_word" id="sync237-11">Fairphone</span> <span class="sync_word" id="sync238-11">4</span> <span class="sync_word" id="sync239-11">5G</span> </span></a></h3>
+                </th>
+                <th class="" style="text-align: center; vertical-align: middle; min-width: 61px; width: 15%;" scope="col">
+                  <p style="display: none;">Vision</p>
+                  <img class="fr-fic fr-dib max-w-mobile" style="width: 40px;" src="https://ps-cdn1.imgix.net/uploads/1610/images/da57e40ebbd7cc2ad797b9f176680588351c4595.png?auto=format%2Ccompress" alt="Vision" data-srcset="[40]" data-width="40"></th>
+                <th class="" style="text-align: center; vertical-align: middle; min-width: 61px; width: 15%;" scope="col">
+                  <p style="display: none;">L'audition</p>
+                  <img class="fr-fic fr-dib max-w-mobile" style="width: 40px;" src="https://ps-cdn1.imgix.net/uploads/1610/images/0c547e49b54e807707f992eb290a16ff4e72ee8d.png?auto=format%2Ccompress" alt="L'audition" data-srcset="[40]" data-width="40">
+                </th>
+                </tr>
+            </thead>
+
+        </table>
+
+
+    </main>
+
+</body>
+</html>

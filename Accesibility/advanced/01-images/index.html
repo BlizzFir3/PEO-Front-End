@@ -1,0 +1,282 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Images | Dawan</title>
+        <style>
+            img {
+                width: 150px;
+                border-radius: 10px;
+            }
+            main {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                margin: 20px;
+                padding: 20px;
+                background-color: #f2f2f2;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                font-family: Arial, sans-serif;
+                font-size: 18px;
+                line-height: 1.5;
+                color: #333;
+                text-align: center;
+                max-width: 1200px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Super magasin de fleur</h1>
+        </header>
+        <main>
+            <section>
+                <h2>L'attribut alt</h2>
+                <img
+                    src="https://images.unsplash.com/photo-1442458017215-285b83f65851?auto=format"
+                    alt="(alt) Journée de la fleurs" />
+            </section>
+            <section>
+                <h2>L'attribut titre</h2>
+                <img
+                    src="https://images.unsplash.com/photo-1442458017215-285b83f65851?auto=format"
+                    alt="(alt) Journée de la fleurs"
+                    title="(title) Journée de la fleurs" />
+            </section>
+            <section>
+                <h2>L'attribut aria-label</h2>
+                <p>aria-label écrase le alt si les deux sont present</p>
+                <img
+                    src="https://images.unsplash.com/photo-1442458017215-285b83f65851?auto=format"
+                    alt="(alt) Journée de la fleurs"
+                    title="(title) Journée de la fleurs"
+                    aria-label="(aria-label) Affiche du collectif Journée des fleurs françaises" />
+            </section>
+            <section>
+                <h2>L'attribut aria-labelledby (liaison avec ID)</h2>
+                <h3 id="affiche">
+                    (aria-labelledby) Journée des fleurs françaises
+                </h3>
+                <img
+                    src="https://images.unsplash.com/photo-1442458017215-285b83f65851?auto=format"
+                    alt="(alt) Journée de la fleurs"
+                    title="(title) Journée de la fleurs"
+                    aria-label="(aria-label) Affiche du collectif Journée des fleurs françaises"
+                    aria-labelledby="affiche" />
+            </section>
+            <section>
+                <h2>L'attribut aria-describedby (liaison avec l'id)</h2>
+                <p id="other">Autre information à relier</p>
+                <img
+                    src="https://images.unsplash.com/photo-1442458017215-285b83f65851?auto=format"
+                    alt="(alt) Journée de la fleurs"
+                    title="(title) Journée de la fleurs"
+                    aria-label="(aria-label) Affiche du collectif Journée des fleurs françaises"
+                    aria-labelledby="affiche"
+                    aria-describedby="description other" />
+                <p id="description">
+                    Le collectif de ..... organise le 24 décembre .... au
+                    programme ..... (toutes les infos de l'image)
+                </p>
+            </section>
+			<section>
+				<h2>L'attribut aria-details (liaison avec ID)</h2>
+				<h3 id="affiche">(aria-describedby) Affiche du collectif </h3>
+				<img
+                    src="https://images.unsplash.com/photo-1442458017215-285b83f65851?auto=format"
+                    alt="(alt) Journée de la fleurs"
+                    title="(title) Journée de la fleurs"
+                    aria-label="(aria-label) Affiche du collectif Journée des fleurs françaises"
+                    aria-labelledby="affiche"
+                    aria-describedby="description other" aria-details="details"/>
+				<details id="details">
+					<summary>description</summary>
+					<p>Ligne 1</p>
+					<p>Ligne 2</p>
+					<p>Ligne 3</p>
+				</details>
+			</section>
+        </main>
+    </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Les images | Dawan</title>
+    </head>
+    <body>
+        <header>
+            <h1>Super magesin de fleur</h1>
+        </header>
+
+        <main>
+            <h2>L'attribut alt</h2>
+            <div>
+                <img
+                    src="https://images.unsplash.com/photo-1442458017215-285b83f65851?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D&w=500"
+                    alt="Journée de la fleur" />
+            </div>
+
+            <h2>L'attribut title</h2>
+            <div>
+                <img
+                    title="(title) Journée de la fleur"
+                    alt="(alt) Journéee de la fleur"
+                    src="https://images.unsplash.com/photo-1442458017215-285b83f65851?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D&w=500"
+                    alt="Journée de la fleur" />
+            </div>
+
+            <h2>L'attribut aria-label</h2>
+            <p>aria-label ecrase le alt si les deux sont presents</p>
+            <div>
+                <img
+                    title="(title) Journée de la fleur"
+                    aria-label="(aria-label) Affiche du collectif journée de la fleur française"
+                    alt="(alt) Journée de la fleur"
+                    src="https://images.unsplash.com/photo-1442458017215-285b83f65851?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D&w=500"
+                    alt="Journée de la fleur" />
+            </div>
+
+            <h2>L'attribut aria-labelledby (liaison avec id)</h2>
+            <h3 id="affiche">
+                (Aria-labelledby) Affiche du collectif journée de la fleur
+                française
+            </h3>
+            <div>
+                <img
+                    aria-labelledby="affiche"
+                    alt="(alt) Journée de la fleur"
+                    src="https://images.unsplash.com/photo-1442458017215-285b83f65851?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D&w=500"
+                    alt="Journée de la fleur" />
+            </div>
+
+            <h2>L'attribut aria-describedby(liaison avec id)</h2>
+            <p id="other">Autre information à relier</p>
+            <h3 id="affiche">
+                (Aria-labelledby) Affiche du collectif journée de la fleur
+                française
+            </h3>
+            <div>
+                <img
+                    aria-describedby="description other"
+                    aria-labelledby="affiche"
+                    alt="(alt) Journée de la fleur"
+                    src="https://images.unsplash.com/photo-1442458017215-285b83f65851?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D&w=500"
+                    alt="Journée de la fleur" />
+            </div>
+            <p id="description">
+                Le collectif de ..... organise le 24 decembre ..... au programme
+                ..... (toutes les infos de l'image)
+            </p>
+            <h2>L'attribut aria-details(liaison avec id)</h2>
+            <h3 id="affiche">
+                (aria-describedby) Affiche du collectif journée de la fleur
+                française
+            </h3>
+            <div>
+                <img
+                    aria-details="details"
+                    aria-labelledby="affiche"
+                    alt="(alt) Journée de la fleur"
+                    src="https://images.unsplash.com/photo-1442458017215-285b83f65851?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D&w=500"
+                    alt="Journée de la fleur" />
+            </div>
+
+            <details id="details">
+                <summary>description</summary>
+                <p>Le collectif .... organise ....</p>
+                <p>I aura lieu le 24 decembre ....</p>
+                <p>Au programme ....</p>
+            </details>
+
+            <h2>Légende</h2>
+            <figure>
+                <figcaption>Légende de l'image</figcaption>
+                <img
+                    alt="(alt) Journée de la fleur"
+                    src="https://images.unsplash.com/photo-1442458017215-285b83f65851?auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D&w=500"
+                    alt="Journée de la fleur" />
+            </figure>
+
+            <h2>Les fichiers vectorielles</h2>
+            <svg
+                aria-label="Icone géometrique"
+                role="img"
+                fill="#000000"
+                height="200px"
+                width="200"
+                version="1.1"
+                id="capa_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 487.3 487.3"
+                xml:space="preserve">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <g>
+                        <g>
+                            <path
+                                d="M487.2,69.7c0,12.9-10.5,23.4-23.4,23.4h-322c-12.9,0-23.4-10.5-23.4-23.4s10.5-23.4,23.4-23.4h322.1 C476.8,46.4,487.2,56.8,487.2,69.7z M463.9,162.3H141.8c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1 c12.9,0,23.4-10.5,23.4-23.4C487.2,172.8,476.8,162.3,463.9,162.3z M463.9,278.3H141.8c-12.9,0-23.4,10.5-23.4,23.4 s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,288.8,476.8,278.3,463.9,278.3z M463.9,394.3H141.8 c-12.9,0-23.4,10.5-23.4,23.4s10.5,23.4,23.4,23.4h322.1c12.9,0,23.4-10.5,23.4-23.4C487.2,404.8,476.8,394.3,463.9,394.3z M38.9,30.8C17.4,30.8,0,48.2,0,69.7s17.4,39,38.9,39s38.9-17.5,38.9-39S60.4,30.8,38.9,30.8z M38.9,146.8 C17.4,146.8,0,164.2,0,185.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,146.8,38.9,146.8z M38.9,262.8 C17.4,262.8,0,280.2,0,301.7s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9S60.4,262.8,38.9,262.8z M38.9,378.7 C17.4,378.7,0,396.1,0,417.6s17.4,38.9,38.9,38.9s38.9-17.4,38.9-38.9C77.8,396.2,60.4,378.7,38.9,378.7z"></path>
+                        </g>
+                    </g>
+                </g>
+                <title>Icone géometrique 2</title>
+                >
+            </svg>
+
+            <h2>Iframe</h2>
+            <figure>
+                <figcaption>Addresse de la tour Eiffel</figcaption>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.991441025346!2d2.291906376846474!3d48.85837360070724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1697640071127!5m2!1sfr!2sfr"
+                    width="600"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </figure>
+
+            <h2>Area</h2>
+            <div>
+                <img
+                    src="assets/html-css-js-logos.jpg"
+                    alt="Liens logos vers MDN"
+                    usemap="#image-map" />
+                <map name="image-map">
+                    <area
+                        target="_blank"
+                        alt="Html"
+                        title="Html"
+                        shape="rect"
+                        coords="304,399,1,2"
+                        href="https://developer.mozilla.org/fr/docs/Web/HTML" />
+                    <area
+                        target="_blank"
+                        alt="CSS"
+                        title="CSS"
+                        shape="rect"
+                        coords="319,1,714,397"
+                        href="https://developer.mozilla.org/fr/docs/Web/CSS" />
+                    <area
+                        target="_blank"
+                        alt="Javascript"
+                        title="Javascript"
+                        shape="rect"
+                        coords="719,4,1034,398"
+                        href="https://developer.mozilla.org/fr/docs/Web/Javascript" />
+                </map>
+            </div>
+        </main>
+    </body>
+</html>
