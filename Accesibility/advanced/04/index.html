@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet" />
+        <title>Liens et Actions</title>
+        <link rel="stylesheet" href="assets/styles.css" />
+        <style>
+            * {
+                list-style: none;
+            }
+
+            #progress-bar {
+                width: 100%;
+                height: 20px;
+                background-color: #eee;
+                margin: 15px auto;
+            }
+
+            #progress-bar-inner {
+                height: 100%;
+                background-color: var(--main);
+                width: 0;
+            }
+
+            .title {
+                background-color: #eee;
+                padding: 8px;
+                margin: 5px auto;
+                color: var(--main);
+            }
+        </style>
+
+        <script>
+            function updateContent() {
+                const bar = document.getElementById("progress-bar-inner");
+                const contentList = document.getElementById("content-list");
+                const statutMessage = document.getElementById("message");
+
+                const API_URL = "https://jsonplaceholder.typicode.com/posts";
+
+                // renitialiser la barre
+                bar.style.width = "0";
+                // lancer requete API
+                fetch(API_URL)
+                    .then((res) => res.json())
+                    .then((posts) => {
+                        let numPosts = 10; // Nombre d'articles à afficher
+                        let currentPost = 0; // compteur pour suivre combien d'articles ont été chargés
+                        // mettre à jour la barre de progression
+                        function updateProgressBar() {
+                            currentPost++;
+                            const pourcent = (currentPost / numPosts) * 100; // calcul le pourcentage d'avancement (1 post sur 10 donne 10%)
+                            bar.style.width = `${pourcent}%`;
+                            // On verifie si tous les articles ont été chargés
+                            if (currentPost == numPosts) {
+                                // tous les post ont étés chargés
+                                setTimeout(() => {
+                                    // mettre a jour de manière progressive
+                                    posts.slice(0, numPosts).forEach((e) => {
+                                        let newContent = `<li class="title" tabindex="0">${e.title}</li>`;
+                                        contentList.insertAdjacentHTML(
+                                            "beforeend",
+                                            newContent
+                                        );
+                                    });
+                                    statutMessage.textContent =
+                                        "Les articles ont été chargées avec succèes !";
+                                    // focus sur le dernier
+                                    let lastItem = document.querySelector(
+                                        "#content-list li:last-child"
+                                    );
+                                    lastItem.focus();
+                                }, 500);
+                            }
+                        }
+
+                        posts.slice(0, numPosts).forEach((post, index) => {
+                            setTimeout(updateProgressBar, index * 200);
+                        });
+                    })
+                    .catch((e) => {
+                        statutMessage.textContent = e;
+                    });
+            }
+        </script>
+    </head>
+
+    <body style="font-size: 1rem; line-height: 1.5rem">
+        <!--Liens d'evitement-->
+        <a class="v-hidden" href="#content">Aller au contenu principal</a>
+        <a class="v-hidden" href="#footer">Aller au pied de page</a>
+
+        <!-- Options d'A11Y -->
+        <div aria-label="Options d'accessibilité">
+            <button
+                aria-label="augmenter la taille du texte"
+                class="btn"
+                onclick="zoomFont()">
+                Aa+
+            </button>
+            <button
+                aria-label="diminuer la taille du texte"
+                class="btn"
+                onclick="unZoomFont()">
+                Aa-
+            </button>
+            <button
+                aria-label="augmenter l'interligne"
+                class="btn"
+                onclick="zoomLineHeigth()">
+                Ll+
+            </button>
+            <button
+                aria-label="diminuer l'interligne"
+                class="btn"
+                onclick="unZoomLineHeigth()">
+                Ll-
+            </button>
+            <button
+                id="btn-dys"
+                aria-label="Changer la police en Dyslexia"
+                class="btn"
+                onclick="setDysFont()">
+                Police Dys
+            </button>
+            <button
+                aria-label="ajouter du contraste de couleur"
+                class="btn"
+                onclick="setContrast()">
+                Contraste
+            </button>
+            <button
+                aria-label="remettre les options de base"
+                class="btn"
+                onclick="reset()">
+                X
+            </button>
+        </div>
+
+        <!--Breadcrumb (fil d'arianne)-->
+        <nav class="breadcrumb">
+            <ol>
+                <li><a href="#">RGAA guide</a></li>
+                <li><a href="#">Règles</a></li>
+                <li><a href="#" aria-current="page">Les liens</a></li>
+            </ol>
+        </nav>
+        <!--Navigation principal -->
+        <!--Balise pour les navigations principales, secondaires...-->
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Accessibilité</a></li>
+                <!--Dropdown-->
+                <li class="drop-container">
+                    <a href="#dropdown" class="drop-text">
+                        Autres
+                        <span
+                            aria-label="Ouvrir le menu déroulant"
+                            class="material-icons"
+                            >arrow_drop_down</span
+                        >
+                    </a>
+                    <ul id="dropdown" class="dropdown">
+                        <li><a href="#">Sous lien 1</a></li>
+                        <li><a href="#">Sous lien 2</a></li>
+                        <li><a href="#">Sous lien 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!--Navigation segondaire -->
+        <header>
+            <h1>Ajax</h1>
+        </header>
+
+        <main id="content">
+            <h2>Accessibilité avec fetch()</h2>
+            <!--progress bar-->
+            <div id="progress-bar">
+                <div
+                    id="progress-bar-inner"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"></div>
+            </div>
+            <h3>Nos articles</h3>
+
+            <!-- Liste des articles -->
+            <ul id="content-list" aria-live="polite">
+                <li class="title">Contenu initial 1</li>
+                <li class="title">Contenu initial 2</li>
+            </ul>
+
+            <!-- Charger/recharger les articles -->
+            <button onclick="updateContent()" class="btn">
+                Mettre à jour le contenu
+            </button>
+            <!-- log changement -->
+            <p id="message" role="status" aria-live="assertive"></p>
+        </main>
+
+        <!-- Pied de page contenant des liens supplémentaires -->
+        <footer id="footer">
+            <nav>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Plan du site</a></li>
+                    <li>
+                        <a href="#"
+                            ><span
+                                aria-label="Contacter un conseiller"
+                                class="material-icons"
+                                >support_agent</span
+                            ></a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+
+        <script src="assets/index.js"></script>
+    </body>
+</html>
