@@ -11,9 +11,9 @@ function App() {
     const style = { color: "blue", backgroundColor: "white" };
 
     const display = () => {
-        if (user === undefined) {
-            return <p>Utilisateur non trouvé</p>;
-        } else return <p>{user.name}</p>;
+        if (user) {
+            return <p>{user.name}</p>;
+        } else return <p>Utilisateur non trouvé</p>;
     };
     return (
         <>
@@ -29,8 +29,11 @@ function App() {
             <section style={style}>
                 <p>Je suis la div avec le style</p>
             </section>
-            <h2>Utilisateur : {display()}</h2>
+			<h2>Utilisateur : {display()}</h2>
+			{/* Affiche nom si vrai sinon Undefined */}
             {user2 ? <h2>{user2.name}</h2> : <h2>Undefined</h2>}
+			{/* Affiche si vrai sinon affiche rien */}
+			{user2 && <h2>{user2.name}</h2>}
         </>
     );
 }
