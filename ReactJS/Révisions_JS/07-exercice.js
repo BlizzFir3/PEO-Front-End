@@ -33,6 +33,31 @@ class Employee {
     }
 }
 
-let Quentin = new Employee()
+let Quentin = new Employee();
 
-Quentin.calculateSalary()
+Quentin.calculateSalary();
+
+class Manager extends Employee {
+    #bonusPercentage;
+
+    constructor(name, age, baseSalary, employeeId, bonusPercentage) {
+        super(name, age, baseSalary, employeeId);
+        this.bonusPercentage = 1.15;
+    }
+
+    get bonusPercentage() {
+        return this.#bonusPercentage;
+    }
+
+    set bonusPercentage(newBonus) {
+        this.#bonusPercentage = 1.15;
+    }
+
+    calculateSalaryManager() {
+        console.log(this.baseSalary * this.bonusPercentage);
+        return this.baseSalary * this.bonusPercentage;
+    }
+}
+
+const Manager1 = new Manager();
+Manager1.calculateSalaryManager();
