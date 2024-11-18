@@ -29,8 +29,8 @@ console.log(moyenne(myTab));
 const moyenneFlechee = (tab) => {
     let x = 0;
 
-    for (let i = 0; i < tab.length; i++) {
-        x += tab[i];
+    for (number of tab) {
+        x += number;
     }
     return x / tab.length;
 };
