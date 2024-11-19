@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
+
 function NavBar() {
-	return (
+    return (
         <div className="navbar bg-neutral text-neutral-content">
             <div className="navbar-start">
                 <div className="dropdown bg-neutral text-neutral-content">
@@ -25,31 +27,32 @@ function NavBar() {
                     </div>
                     <ul
                         tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow bg-primary text-primary-content"
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow bg-neutral text-neutral-content"
                     >
                         <li>
-                            <a className="btn btn-ghost" href="/hook-use-state">
+                            <Link
+                                className="btn btn-ghost"
+                                to={"/hook-use-state"}
+                            >
                                 HookUseState
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl" href="/">Accueil</a>
+				<Link className="btn btn-ghost text-xl" to={"/"}>
+                    Accueil
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li>
-                        <a
-                            className="btn btn-ghost text-xl"
-                            href="/hook-use-state"
-                        >
-                            HookUseState
-                        </a>
+                        {/* <ahref="/hook-use-state">HookUseState</a> */}
+                        <Link to={'/hook-use-state'}>HookUseState</Link>
                     </li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn btn-ghost text-xl"></a>
+                <Link className="btn btn-ghost text-xl"></Link>
             </div>
         </div>
     );
