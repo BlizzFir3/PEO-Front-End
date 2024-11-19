@@ -1,3 +1,5 @@
+// import "../../App.css";
+
 function JsxTheorie() {
     let user = { name: 'John', email: 'john@gmail.com' };
     let user2 = undefined;
@@ -57,22 +59,22 @@ function JsxTheorie() {
 
 const Children = ({ text, text2 }) => {
     return (
-        <Fragment>
+        <>
             <h1>Enfants</h1>
             <p>Voici les enfants : {text}</p>
             {text2 && <p>{text2}</p>}
-        </Fragment>
+        </>
     );
 };
 
 const Title = ({ title, children, color = 'blue', ...props }) => {
     return (
-        <Fragment>
+        <>
             <h1 style={{ color: color }} {...props}>
                 {title}
             </h1>
             <h2>{children}</h2>
-        </Fragment>
+        </>
     );
 };
 

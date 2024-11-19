@@ -1,11 +1,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import JsxTheorie from './components/Views/JsxTheorie';
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<>Ma page d'accueil</>} />
+                <Route path="/" element={<JsxTheorie />} />
                 <Route
                     path="/test"
                     style={{ color: 'white' }}
