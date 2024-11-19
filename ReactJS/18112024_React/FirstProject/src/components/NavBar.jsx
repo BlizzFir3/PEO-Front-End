@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 function NavBar() {
     return (
-        <div className="navbar bg-neutral text-neutral-content">
+        <div className="navbar bg-neutral text-neutral-content shadow-lg">
             <div className="navbar-start">
                 <div className="dropdown bg-neutral text-neutral-content">
                     <div
