@@ -2,6 +2,7 @@ import Consigne from '../Consigne';
 import { useState } from 'react';
 
 function Exercice() {
+	// Objet de produits
     const products = [
         { category: 'Fruits', price: '$1', number: 0, name: 'Banana' },
         { category: 'Fruits', price: '$1', number: 2, name: 'Mango' },
@@ -26,8 +27,47 @@ function Exercice() {
         return fruit.category === 'Vegetables' && fruit.number !== 0;
     });
 
+    // Pour masquer les products non disponibles
     const [checkedFruit, setCheckedFruit] = useState(false);
     const [checkedVegetable, setCheckedVegetable] = useState(false);
+
+    // Pour la recherche par nom
+    const [nameFruit, setNameFruit] = useState('');
+    const [nameVegetable, setNameVegetable] = useState('');
+
+    const handleSearchFruit = (e) => {
+        setNameFruit(e.target.value);
+    };
+    const handleSearchVegetable = (e) => {
+        setNameVegetable(e.target.value);
+    };
+
+	// Filtrage par nom (si character contenue dans le nom ca affiche)
+    let vegetablesByName = vegetables.filter((vegetable) => {
+        return vegetable.name
+            .toLowerCase()
+            .includes(nameVegetable.toLowerCase());
+    });
+    let fruitsByName = fruits.filter((fruit) => {
+        return fruit.name.toLowerCase().includes(nameFruit.toLowerCase());
+    });
+
+	// Si la case est cocher on affiche uniquement les produit disponible en fonction du tableau
+    function isCheckedFruit() {
+        if (checkedFruit) {
+            return <FruitOuLegumes data={fruitsInStock} />;
+        } else {
+            return <FruitOuLegumes data={fruits} />;
+        }
+    }
+
+    function isCheckedVegetable() {
+        if (checkedVegetable) {
+            return <FruitOuLegumes data={vegetablesInStock} />;
+        } else {
+            return <FruitOuLegumes data={vegetables} />;
+        }
+    }
 
     return (
         <>
@@ -38,6 +78,8 @@ function Exercice() {
                 <input
                     type="text"
                     placeholder="Rechercher un fruit"
+                    value={nameFruit}
+                    onChange={handleSearchFruit}
                     className="input input-bordered w-24 md:w-auto"
                 />
             </div>
@@ -50,10 +92,10 @@ function Exercice() {
                             <th scope="col">Quantité</th>
                         </tr>
                     </thead>
-                    {checkedFruit ? (
-                        <FruitOuLegumes data={fruitsInStock} />
+                    {nameFruit ? (
+                        <FruitOuLegumes data={fruitsByName} />
                     ) : (
-                        <FruitOuLegumes data={fruits} />
+                        isCheckedFruit()
                     )}
                 </table>
             </div>
@@ -69,6 +111,8 @@ function Exercice() {
                 <input
                     type="text"
                     placeholder="Rechercher un legume"
+                    value={nameVegetable}
+                    onChange={handleSearchVegetable}
                     className="input input-bordered w-24 md:w-auto"
                 />
             </div>
@@ -81,10 +125,10 @@ function Exercice() {
                             <th scope="col">Quantité</th>
                         </tr>
                     </thead>
-                    {checkedVegetable ? (
-                        <FruitOuLegumes data={vegetablesInStock} />
+                    {nameVegetable ? (
+                        <FruitOuLegumes data={vegetablesByName} />
                     ) : (
-                        <FruitOuLegumes data={vegetables} />
+                        isCheckedVegetable()
                     )}
                 </table>
             </div>
