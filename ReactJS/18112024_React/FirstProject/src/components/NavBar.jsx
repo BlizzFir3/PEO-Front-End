@@ -32,20 +32,17 @@ function NavBar() {
                         <li>
                             <Link
                                 className="btn btn-ghost"
-                                to={"/hook-use-state"}
+                                to={'/hook-use-state'}
                             >
                                 HookUseState
                             </Link>
-                            <Link
-                                className="btn btn-ghost"
-                                to={"/flux"}
-                            >
-                                Flux
+                            <Link className="btn btn-ghost" to={'/flux'}>
+                                Flux de donnees
                             </Link>
                         </li>
                     </ul>
                 </div>
-				<Link className="btn btn-ghost text-xl" to={"/"}>
+                <Link className="btn btn-ghost text-xl" to={'/'}>
                     Accueil
                 </Link>
             </div>
@@ -57,7 +54,7 @@ function NavBar() {
                     </li>
                     <li>
                         {/* <ahref="/hook-use-state">HookUseState</a> */}
-                        <Link to={'/flux'}>Flux</Link>
+                        <Link to={'/flux'}>Flux de donnees</Link>
                     </li>
                 </ul>
             </div>
