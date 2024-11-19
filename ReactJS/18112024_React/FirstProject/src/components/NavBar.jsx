@@ -42,6 +42,9 @@ function NavBar() {
                             <Link className="btn btn-ghost" to={'/formulaire'}>
                                 Les Formulaires
                             </Link>
+                            <Link className="btn btn-ghost" to={'/exercice'}>
+                                Exercice
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -52,16 +55,16 @@ function NavBar() {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li>
-                        {/* <ahref="/hook-use-state">HookUseState</a> */}
                         <Link to={'/hook-use-state'}>HookUseState</Link>
                     </li>
                     <li>
-                        {/* <ahref="/hook-use-state">HookUseState</a> */}
                         <Link to={'/flux'}>Flux de donnees</Link>
                     </li>
                     <li>
-                        {/* <ahref="/hook-use-state">HookUseState</a> */}
                         <Link to={'/formulaire'}>Les Formulaires</Link>
+                    </li>
+                    <li>
+                        <Link to={'/exercice'}>Exercice</Link>
                     </li>
                 </ul>
             </div>
