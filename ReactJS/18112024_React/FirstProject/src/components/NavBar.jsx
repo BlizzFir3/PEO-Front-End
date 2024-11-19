@@ -45,6 +45,9 @@ function NavBar() {
                             <Link className="btn btn-ghost" to={'/exercice'}>
                                 Exercice
                             </Link>
+                            <Link className="btn btn-ghost" to={'/tic-tac-toe'}>
+                                Morpion
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -65,6 +68,9 @@ function NavBar() {
                     </li>
                     <li>
                         <Link to={'/exercice'}>Exercice</Link>
+                    </li>
+                    <li>
+                        <Link to={'/tic-tac-toe'}>Morpion</Link>
                     </li>
                 </ul>
             </div>

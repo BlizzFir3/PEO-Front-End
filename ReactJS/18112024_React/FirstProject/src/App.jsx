@@ -7,6 +7,7 @@ import Flux from './components/views/Flux';
 import Formulaire from './components/views/Formulaire';
 import HookUseState from './components/views/HookUseSate';
 import JsxTheorie from './components/Views/JsxTheorie';
+import TicTacToe from './components/views/TicTacToe';
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
 				<Route path='/flux' element={<Flux/>} />
 				<Route path='/formulaire' element={<Formulaire/>} />
 				<Route path='/exercice' element={<Exercice/>} />
+				<Route path='/tic-tac-toe' element={<TicTacToe/>} />
 			</Routes>
 			<Footer />
         </BrowserRouter>
