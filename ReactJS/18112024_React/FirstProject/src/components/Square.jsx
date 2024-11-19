@@ -3,7 +3,6 @@ import "../TicTacToe.css"
 export default function Square() {
     return (
         <>
-            <div className="tictac-board">
                 <div className="board-row">
                     <button className="square color-ant-w">X</button>
                     <button className="square color-ant-w">X</button>
@@ -19,7 +18,6 @@ export default function Square() {
                     <button className="square color-ant-w">X</button>
                     <button className="square color-ant-w">X</button>
                 </div>
-            </div>
         </>
     );
 }

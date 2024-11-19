@@ -2,7 +2,7 @@ import Consigne from '../Consigne';
 import { useState } from 'react';
 
 function Exercice() {
-	// Objet de produits
+    // Objet de produits
     const products = [
         { category: 'Fruits', price: '$1', number: 0, name: 'Banana' },
         { category: 'Fruits', price: '$1', number: 2, name: 'Mango' },
@@ -13,17 +13,17 @@ function Exercice() {
     ];
 
     // Filtrage des aliments par category ainsi que number (en stock ou non)
-    let fruitsInStock = products.filter((fruit) => {
+    const fruitsInStock = products.filter((fruit) => {
         return fruit.category === 'Fruits' && fruit.number !== 0;
     });
-    let fruits = products.filter((fruit) => {
+    const fruits = products.filter((fruit) => {
         return fruit.category === 'Fruits';
     });
 
-    let vegetables = products.filter((fruit) => {
+    const vegetables = products.filter((fruit) => {
         return fruit.category === 'Vegetables';
     });
-    let vegetablesInStock = products.filter((fruit) => {
+    const vegetablesInStock = products.filter((fruit) => {
         return fruit.category === 'Vegetables' && fruit.number !== 0;
     });
 
@@ -42,17 +42,17 @@ function Exercice() {
         setNameVegetable(e.target.value);
     };
 
-	// Filtrage par nom (si character contenue dans le nom ca affiche)
-    let vegetablesByName = vegetables.filter((vegetable) => {
+    // Filtrage par nom (si character contenue dans le nom ca affiche)
+    const vegetablesByName = vegetables.filter((vegetable) => {
         return vegetable.name
             .toLowerCase()
             .includes(nameVegetable.toLowerCase());
     });
-    let fruitsByName = fruits.filter((fruit) => {
+    const fruitsByName = fruits.filter((fruit) => {
         return fruit.name.toLowerCase().includes(nameFruit.toLowerCase());
     });
 
-	// Si la case est cocher on affiche uniquement les produit disponible en fonction du tableau
+    // Si la case est cocher on affiche uniquement les produit disponible en fonction du tableau
     function isCheckedFruit() {
         if (checkedFruit) {
             return <FruitOuLegumes data={fruitsInStock} />;
