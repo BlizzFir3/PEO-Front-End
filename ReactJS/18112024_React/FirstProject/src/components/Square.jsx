@@ -1,3 +1,25 @@
+import "../TicTacToe.css"
+
 export default function Square() {
-    return <button className="square">X</button>;
+    return (
+        <>
+            <div className="tictac-board">
+                <div className="board-row">
+                    <button className="square color-ant-w">X</button>
+                    <button className="square color-ant-w">X</button>
+                    <button className="square color-ant-w">X</button>
+                </div>
+                <div className="board-row">
+                    <button className="square color-ant-w">X</button>
+                    <button className="square color-ant-w">X</button>
+                    <button className="square color-ant-w">X</button>
+                </div>
+                <div className="board-row">
+                    <button className="square color-ant-w">X</button>
+                    <button className="square color-ant-w">X</button>
+                    <button className="square color-ant-w">X</button>
+                </div>
+            </div>
+        </>
+    );
 }
