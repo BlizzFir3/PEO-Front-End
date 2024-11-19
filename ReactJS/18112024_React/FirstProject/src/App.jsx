@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import Exercice from './components/views/Exercice';
 import Flux from './components/views/Flux';
@@ -20,7 +21,8 @@ function App() {
 				<Route path='/flux' element={<Flux/>} />
 				<Route path='/formulaire' element={<Formulaire/>} />
 				<Route path='/exercice' element={<Exercice/>} />
-            </Routes>
+			</Routes>
+			<Footer />
         </BrowserRouter>
     );
 }

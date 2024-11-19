@@ -21,7 +21,7 @@ function HookUseState() {
 
     return (
         <>
-            <h1>Le hook useState</h1>
+            <h1 className="pt-20">Le hook useState</h1>
             <p>{count}</p>
             <button className="btn btn-outline btn-primary" onClick={increment}>
                 {' '}

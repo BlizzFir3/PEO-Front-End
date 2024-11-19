@@ -9,7 +9,7 @@ function Formulaire() {
 
     return (
         <>
-            <h1>Les Formulaires</h1>
+            <h1 className="pt-20">Les Formulaires</h1>
             <h2>Les champs controlés</h2>
             <p>
                 En React, nous avons un concept que nous pouvons appeler les
