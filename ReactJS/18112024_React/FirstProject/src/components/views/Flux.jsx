@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 function Flux() {
     const data = [
         { id: 1, nom: 'Produit 1', prix: 20.99, quantite: 5 },
@@ -6,6 +8,8 @@ function Flux() {
         { id: 4, nom: 'Produit 4', prix: 30.0, quantite: 25 },
         { id: 5, nom: 'Produit 5', prix: 26.0, quantite: 16 },
     ];
+
+    const [checked, setChecked] = useState(false);
 
     return (
         <>
@@ -20,8 +24,12 @@ function Flux() {
             <p>
                 En React, pour faire passer des donnees d'un composant enfant
                 vers son parent, il est courant d'utiliser des fonctions de
-                rappel (callbacks)
+                rappel (callbacks) passes en tant que porps. On les utilise
+                ensuite dans le composant enfant pour transmettre des donnees
+                vers son parent.
             </p>
+            <CheckBoxEnfant checked={checked} onCheck={setChecked} />
+            {checked ? 'case cochee' : 'case non cochee'}
         </>
     );
 }
@@ -34,6 +42,18 @@ const ComposantEnfant = ({ data }) => {
             <p>quantite : {produit.quantite}</p>
         </div>
     ));
+};
+
+const CheckBoxEnfant = ({ checked, onCheck }) => {
+    const handleClick = (e) => {
+		onCheck(e.target.checked);
+    };
+
+    return (
+        <>
+            <input type="checkbox" onChange={handleClick} checked={checked} />
+        </>
+    );
 };
 
 export default Flux;
