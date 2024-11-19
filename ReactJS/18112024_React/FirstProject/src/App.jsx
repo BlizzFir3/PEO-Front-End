@@ -1,11 +1,13 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import NavBar from './components/NavBar';
 import HookUseState from './components/views/HookUseSate';
 import JsxTheorie from './components/Views/JsxTheorie';
 
 function App() {
     return (
-        <BrowserRouter>
+		<BrowserRouter>
+			<NavBar/>
             <Routes>
                 <Route path="/" element={<JsxTheorie />} />
                 <Route
