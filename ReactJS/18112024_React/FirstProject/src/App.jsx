@@ -51,9 +51,19 @@ function App() {
                     <li key={fruit}>{fruit}</li>
                 ))}
             </ul>
+            <Children text="Voici le texte en parametre" text2="Deuxieme texte" />
         </>
     );
 }
 
 export default App;
 
+const Children = ({ text, text2 }) => {
+    return (
+        <Fragment>
+            <h1>Enfants</h1>
+			<p>Voici les enfants : {text}</p>
+			{text2 && <p>{text2}</p>}
+        </Fragment>
+    );
+};
