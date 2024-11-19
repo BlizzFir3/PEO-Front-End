@@ -39,6 +39,9 @@ function NavBar() {
                             <Link className="btn btn-ghost" to={'/flux'}>
                                 Flux de donnees
                             </Link>
+                            <Link className="btn btn-ghost" to={'/formulaire'}>
+                                Les Formulaires
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -55,6 +58,10 @@ function NavBar() {
                     <li>
                         {/* <ahref="/hook-use-state">HookUseState</a> */}
                         <Link to={'/flux'}>Flux de donnees</Link>
+                    </li>
+                    <li>
+                        {/* <ahref="/hook-use-state">HookUseState</a> */}
+                        <Link to={'/formulaire'}>Les Formulaires</Link>
                     </li>
                 </ul>
             </div>
