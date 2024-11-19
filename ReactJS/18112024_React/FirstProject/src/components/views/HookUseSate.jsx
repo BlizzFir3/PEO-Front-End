@@ -16,7 +16,7 @@ function HookUseState() {
         // setCount(count + 1);
         // Les deux font la meme chose mais plus propre avec prevValue
         setCount((prevValue) => prevValue + 1);
-        console.log(count);
+        // console.log(count);
     };
 
     return (
@@ -24,6 +24,9 @@ function HookUseState() {
             <h1>Le hook useState</h1>
             <p>{count}</p>
             <button onClick={increment}> + </button>
+            <button onClick={() => setCount((prevValue) => prevValue - 1)}>
+                -
+            </button>
         </>
     );
 }
