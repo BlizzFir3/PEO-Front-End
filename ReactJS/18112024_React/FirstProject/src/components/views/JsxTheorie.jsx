@@ -40,8 +40,16 @@ function JsxTheorie() {
             {user2 ? <h2>{user2.name}</h2> : <h2>Undefined</h2>}
             {/* Affiche si vrai sinon affiche rien */}
             {user2 && <h2>{user2.name}</h2>}
-            <button onClick={handleClick}>Cliquez !</button>
-            <button onClick={() => alert("J'ai encore cliquer")}>
+            <button
+                className="btn btn-outline btn-primary"
+                onClick={handleClick}
+            >
+                Cliquez !
+            </button>
+            <button
+                className="btn btn-outline btn-secondary"
+                onClick={() => alert("J'ai encore cliquer")}
+            >
                 Cliquez encore !
             </button>
             <ul>
