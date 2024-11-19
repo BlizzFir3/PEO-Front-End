@@ -23,12 +23,15 @@ function HookUseState() {
         <>
             <h1 className="pt-20">Le hook useState</h1>
             <p>{count}</p>
-            <button className="btn btn-outline btn-primary" onClick={increment}>
+            <button
+                className="btn btn-outline btn-primary p-4 m-2"
+                onClick={increment}
+            >
                 {' '}
                 +{' '}
             </button>
             <button
-                className="btn btn-outline btn-secondary"
+                className="btn btn-outline btn-secondary p-4 m-2"
                 onClick={() => setCount((prevValue) => prevValue - 1)}
             >
                 -

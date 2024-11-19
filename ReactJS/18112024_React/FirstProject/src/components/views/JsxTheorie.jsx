@@ -41,13 +41,13 @@ function JsxTheorie() {
             {/* Affiche si vrai sinon affiche rien */}
             {user2 && <h2>{user2.name}</h2>}
             <button
-                className="btn btn-outline btn-primary"
+                className="btn btn-outline btn-primary p-5 m-5"
                 onClick={handleClick}
             >
                 Cliquez !
             </button>
             <button
-                className="btn btn-outline btn-secondary"
+                className="btn btn-outline btn-secondary p-5 m-5"
                 onClick={() => alert("J'ai encore cliquer")}
             >
                 Cliquez encore !

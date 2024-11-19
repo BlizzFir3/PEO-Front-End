@@ -1,10 +1,10 @@
-import Square from "../Square";
+import Board from "../Board";
 
 function TicTacToe() {
 	return (
         <>
             <h1 className="pt-20">Morpion</h1>
-            <Square />
+            <Board />
         </>
     );
 }
