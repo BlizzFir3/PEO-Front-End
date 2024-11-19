@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 /**
  * This function demonstrates the usage of the useState hook in a React component.
@@ -7,13 +7,15 @@ import { useState } from "react";
  * @returns {JSX.Element} - A React component that displays the current count and a button to increment it.
  */
 function HookUseState() {
-	const [count, setCount] = useState(0);
+    const [count, setCount] = useState(0);
 
     /**
      * Increments the count state by 1 and logs the current count to the console.
      */
     const increment = () => {
-        setCount(count + 1);
+        // setCount(count + 1);
+        // Les deux font la meme chose mais plus propre avec prevValue
+        setCount((prevValue) => prevValue + 1);
         console.log(count);
     };
 
@@ -25,6 +27,5 @@ function HookUseState() {
         </>
     );
 }
-
 
 export default HookUseState;
