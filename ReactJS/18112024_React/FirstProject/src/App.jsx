@@ -25,10 +25,11 @@ function App() {
 
     return (
         <>
+            <Title title="Mon titre !" id="myId" className="myClass">Ceci est le children</Title>
             <p>{salut}</p>
             <p>Salut une deuxieme fois !</p>
-            // En jsx les balises sont automatiquement echappees // Deconseille,
-            a utiliser dans des cas particuliers
+            {/* En jsx les balises sont automatiquement echappees
+			Deconseille, a utiliser dans des cas particuliers */}
             <h1>{title}</h1>
             <h1 dangerouslySetInnerHTML={{ __html: title }}></h1>
             <section>
@@ -51,7 +52,10 @@ function App() {
                     <li key={fruit}>{fruit}</li>
                 ))}
             </ul>
-            <Children text="Voici le texte en parametre" text2="Deuxieme texte" />
+            <Children
+                text="Voici le texte en parametre"
+                text2="Deuxieme texte"
+            />
         </>
     );
 }
@@ -62,8 +66,17 @@ const Children = ({ text, text2 }) => {
     return (
         <Fragment>
             <h1>Enfants</h1>
-			<p>Voici les enfants : {text}</p>
-			{text2 && <p>{text2}</p>}
+            <p>Voici les enfants : {text}</p>
+            {text2 && <p>{text2}</p>}
+        </Fragment>
+    );
+};
+
+const Title = ({ title, children, color = 'blue', ...props }) => {
+    return (
+        <Fragment>
+            <h1 style={{ color: color }} {...props}>{title}</h1>
+            <h2>{children}</h2>
         </Fragment>
     );
 };
