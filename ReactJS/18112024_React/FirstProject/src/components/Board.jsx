@@ -1,4 +1,5 @@
-import "../TicTacToe.css"
+import '../TicTacToe.css';
+import { useState } from 'react';
 
 export default function Board() {
     return (
@@ -23,5 +24,11 @@ export default function Board() {
 }
 
 function Square() {
-	return <button className="square color-ant-w">X</button>;
+    function handleClick() {
+        setValue('X')
+    }
+
+	const [value, setValue] = useState(null);
+
+    return <button className="square color-ant-w" onClick={handleClick}>{value}</button>;
 }

@@ -83,22 +83,12 @@ function Exercice() {
                     className="input input-bordered w-24 md:w-auto"
                 />
             </div>
-            <div className="overflow-x-auto">
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nom</th>
-                            <th scope="col">Prix</th>
-                            <th scope="col">Quantité</th>
-                        </tr>
-                    </thead>
+
                     {nameFruit ? (
                         <FruitOuLegumes data={fruitsByName} />
                     ) : (
                         isCheckedFruit()
                     )}
-                </table>
-            </div>
             <div className="p-10">
                 <p>Masquer les fruits non disponible : </p>
                 <CheckBoxFruit
@@ -116,22 +106,13 @@ function Exercice() {
                     className="input input-bordered w-24 md:w-auto"
                 />
             </div>
-            <div className="overflow-x-auto">
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Nom</th>
-                            <th scope="col">Prix</th>
-                            <th scope="col">Quantité</th>
-                        </tr>
-                    </thead>
+            
                     {nameVegetable ? (
                         <FruitOuLegumes data={vegetablesByName} />
                     ) : (
                         isCheckedVegetable()
                     )}
-                </table>
-            </div>
+                
             <div className="p-10">
                 <p>Masquer les legumes non disponible :</p>
                 <CheckBoxVegetable
@@ -144,15 +125,30 @@ function Exercice() {
 }
 
 const FruitOuLegumes = ({ data }) => {
-    return data.map((produit) => (
-        <tbody>
-            <tr>
-                <td>{produit.name}</td>
-                <td>{produit.price}</td>
-                <td>{produit.number}</td>
-            </tr>
-        </tbody>
-    ));
+    return (
+		<>
+			<div className="overflow-x-auto">
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Prix</th>
+                            <th scope="col">Quantité</th>
+                        </tr>
+                    </thead>
+            {data.map((produit) => (
+                <tbody>
+                    <tr>
+                        <td>{produit.name}</td>
+                        <td>{produit.price}</td>
+                        <td>{produit.number}</td>
+                    </tr>
+				</tbody>
+            ))}
+			</table>
+		</div>
+        </>
+    );
 };
 
 const CheckBoxFruit = ({ checked, onCheck }) => {
