@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import HookUseState from './components/views/HookUseSate';
 import JsxTheorie from './components/Views/JsxTheorie';
 
 function App() {
@@ -8,9 +9,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<JsxTheorie />} />
                 <Route
-                    path="/test"
-                    style={{ color: 'white' }}
-                    element={<h1>page TEST</h1>}
+                    path="/hook-use-state"
+                    element={<HookUseState/>}
                 />
             </Routes>
         </BrowserRouter>
