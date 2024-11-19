@@ -1,8 +1,8 @@
 function NavBar() {
 	return (
-        <div className="navbar bg-primary text-primary-content">
+        <div className="navbar bg-neutral text-neutral-content">
             <div className="navbar-start">
-                <div className="dropdown bg-primary text-primary-content">
+                <div className="dropdown bg-neutral text-neutral-content">
                     <div
                         tabIndex={0}
                         role="button"
@@ -28,29 +28,28 @@ function NavBar() {
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow bg-primary text-primary-content"
                     >
                         <li>
-                            <a className="btn btn-ghost">JsxTheorie</a>
-                        </li>
-                        <li>
-                            <a className="btn btn-ghost">
+                            <a className="btn btn-ghost" href="/hook-use-state">
                                 HookUseState
                             </a>
                         </li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Accueil</a>
+                <a className="btn btn-ghost text-xl" href="/">Accueil</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li>
-                        <a className="btn btn-ghost text-xl">JsxTheorie</a>
-                    </li>
-                    <li>
-                        <a className="btn btn-ghost text-xl">HookUseState</a>
+                        <a
+                            className="btn btn-ghost text-xl"
+                            href="/hook-use-state"
+                        >
+                            HookUseState
+                        </a>
                     </li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn btn-ghost text-xl">Button</a>
+                <a className="btn btn-ghost text-xl"></a>
             </div>
         </div>
     );
