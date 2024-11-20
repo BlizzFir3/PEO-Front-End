@@ -6,6 +6,7 @@ import CycleDeVie from './components/views/CycleDeVie';
 import Exercice from './components/views/Exercice';
 import Flux from './components/views/Flux';
 import Formulaire from './components/views/Formulaire';
+import HookPersonnalise from './components/views/HookPersonnalise';
 import HookUseState from './components/views/HookUseSate';
 import JsxTheorie from './components/Views/JsxTheorie';
 import RequeteAPI from './components/views/RequeteAPI';
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/use-effect" element={<UseEffect />} />
                 <Route path="/cycle-de-vie" element={<CycleDeVie />} />
                 <Route path="/api" element={<RequeteAPI />} />
+                <Route path="/hook-perso" element={<HookPersonnalise />} />
             </Routes>
             <Footer />
         </BrowserRouter>

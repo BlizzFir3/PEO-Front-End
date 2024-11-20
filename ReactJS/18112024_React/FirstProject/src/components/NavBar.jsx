@@ -60,6 +60,9 @@ function NavBar() {
                             <Link className="btn btn-ghost" to={'/api'}>
                                 Requete API
                             </Link>
+                            <Link className="btn btn-ghost" to={'/hook-perso'}>
+                                Hook Personnalisé
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -92,6 +95,9 @@ function NavBar() {
                     </li>
                     <li>
                         <Link to={'/api'}>Requete API</Link>
+                    </li>
+                    <li>
+                        <Link to={'/hook-perso'}>Hook Personnalisé</Link>
                     </li>
                 </ul>
             </div>
