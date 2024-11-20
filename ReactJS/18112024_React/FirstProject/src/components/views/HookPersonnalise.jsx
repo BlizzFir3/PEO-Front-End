@@ -3,7 +3,9 @@ import { useToggle } from '../../hooks/useToggle';
 
 export default function HookPersonnalise() {
 	const [checked, toggleChecked] = useToggle();
-	const [count, increment, decrement] = useIncrement({min: -10});
+	const { count,
+		increment: incrementer,
+		decrement: decrementer } = useIncrement({ min: -10 });
 
     return (
         <>
@@ -46,13 +48,13 @@ export default function HookPersonnalise() {
                 <h2>Cas de figure n 2</h2>
                 <p>{count}</p>
                 <button
-                    onClick={increment}
+                    onClick={incrementer}
                     className="btn btn-primary btn-outline p-4 m-4"
                 >
                     +
                 </button>
                 <button
-                    onClick={decrement}
+                    onClick={decrementer}
                     className="btn btn-secondary btn-outline p-4 m-4"
                 >
                     -

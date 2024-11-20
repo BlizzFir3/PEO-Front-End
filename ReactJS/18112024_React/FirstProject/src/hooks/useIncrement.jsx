@@ -12,5 +12,5 @@ export const useIncrement = ({
     const decrement = () =>
         setCount((prevCount) => (prevCount > min ? prevCount - 1 : prevCount));
 
-    return [count, increment, decrement];
+    return { count, increment, decrement };
 };
