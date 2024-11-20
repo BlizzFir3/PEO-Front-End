@@ -76,20 +76,35 @@ function NavBar() {
                     Accueil
                 </Link>
             </div>
+            <div className="flex-none navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal px-">
+                    <li>
+                        <details>
+                            <summary>Bases</summary>
+                            <ul className="bg-base-100 rounded-t-none p-2">
+                                <li>
+                                    <Link to={'/hook-use-state'}>
+                                        HookUseState
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to={'/flux'}>Flux de donnees</Link>
+                                </li>
+                                <li>
+                                    <Link to={'/formulaire'}>
+                                        Les Formulaires
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to={'/exercice'}>Exercice</Link>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li>
-                        <Link to={'/hook-use-state'}>HookUseState</Link>
-                    </li>
-                    <li>
-                        <Link to={'/flux'}>Flux de donnees</Link>
-                    </li>
-                    <li>
-                        <Link to={'/formulaire'}>Les Formulaires</Link>
-                    </li>
-                    <li>
-                        <Link to={'/exercice'}>Exercice</Link>
-                    </li>
                     <li>
                         <Link to={'/tic-tac-toe'}>Morpion</Link>
                     </li>
@@ -99,32 +114,30 @@ function NavBar() {
                     <li>
                         <Link to={'/cycle-de-vie'}>Cycle de vie</Link>
                     </li>
+                    <li>
+                        <Link to={'/hook-perso'}>Hook Personnalisé</Link>
+                    </li>
                 </ul>
             </div>
-                    <div className="flex-none navbar-center hidden lg:flex">
-                        <ul className="menu menu-horizontal px-">
-                            <li>
-                                <details>
-                                    <summary>API</summary>
-                                    <ul className="bg-base-100 rounded-t-none p-2">
-                                        <li>
-                                            <Link to={'/api'}>Requete API</Link>
-                                        </li>
-                                        <li>
-                                            <Link to={'/hook-perso'}>
-                                                Hook Personnalisé
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to={'/exercice-api'}>
-                                                Exercice API
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                </details>
-                            </li>
-                        </ul>
-                    </div>
+            <div className="flex-none navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal px-">
+                    <li>
+                        <details>
+                            <summary>API</summary>
+                            <ul className="bg-base-100 rounded-t-none p-2">
+                                <li>
+                                    <Link to={'/api'}>Requete API</Link>
+                                </li>
+                                <li>
+                                    <Link to={'/exercice-api'}>
+                                        Exercice API
+                                    </Link>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </div>
             <div className="navbar-end">
                 <Link className="btn btn-ghost text-xl"></Link>
             </div>
