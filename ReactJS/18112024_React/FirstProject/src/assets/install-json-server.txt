@@ -1,0 +1,13 @@
+- Installez JSON Server :
+	npm install json-server --save-dev
+ 
+- Créez un fichier db.json :
+	À la racine de votre projet, créez un fichier db.json qui servira de base de données pour JSON Server
+ 
+- Ajoutez une commande pour lancer JSON Server dans package.json :
+	- Modifiez votre fichier package.json pour ajouter une commande qui utilise JSON Server. Ajoutez ceci sous la section "scripts" :
+		"scripts": {
+			"json-server": "json-server --watch --port 3001 db.json"
+		},
+- Lancez JSON Server :
+	npm run json-server
