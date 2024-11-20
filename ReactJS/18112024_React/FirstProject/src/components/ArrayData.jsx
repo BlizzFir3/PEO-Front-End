@@ -24,15 +24,15 @@ export default function ArrayData() {
     }, []);
 
     function deleteProduct(id) {
-        console.log(id);
         axios
             .delete(url + '/' + id)
             .then(() => {
-                console.log('deleted product with id : ${id}');
+				console.log('deleted product with id : ' + id);
+				setProducts(products.filter((product) => product.id !== id));
             })
             .catch((error) => {
                 console.error(error.message);
-                console.error('Error deleting product : ${id}');
+                console.error('Error deleting product : ' + id);
             });
     }
 

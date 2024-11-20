@@ -26,7 +26,7 @@ export default function EditPopup({ data }) {
                         </svg>
                     </button>
                 }
-                position="right center"
+                position="bottom end"
                 contentStyle={{
                     width: '700px',
                     height: '200px',
