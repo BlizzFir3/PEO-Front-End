@@ -6,7 +6,7 @@ export default function ExerciceApi() {
         <>
             <h1 className="pt-20">Exercice API</h1>
             <ConsigneApi />
-            <h2 className='m-4'>Tableau des porduits</h2>
+            <h2 className='m-4'>Tableau des produits</h2>
 			<ArrayData />
         </>
     );

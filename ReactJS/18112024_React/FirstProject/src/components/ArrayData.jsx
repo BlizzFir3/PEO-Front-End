@@ -1,10 +1,11 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import AddProductPopup from './AddProductPopup';
 import EditPopup from './EditPopup';
 
 export default function ArrayData() {
     const url = 'http://localhost:3001/products';
-    const [products, setProducts] = useState([]);
+	const [products, setProducts] = useState([]);
 
     useEffect(() => {
         const fetchData = () => {
@@ -22,6 +23,27 @@ export default function ArrayData() {
         };
         fetchData();
     }, []);
+	
+	    const addProduct = (e) => {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+
+            const newProduct = {
+                category: formData.get('category'),
+                name: formData.get('name'),
+                price: formData.get('price'),
+                number: formData.get('number'),
+            };
+
+            axios
+                .post(url, newProduct)
+                .then((response) =>
+                    setProducts((prev) => [...prev, response.data])
+                )
+                .catch((error) => console.log(error.message));
+
+            formRef.current.reset();
+        };
 
     function deleteProduct(id) {
         axios
@@ -38,6 +60,7 @@ export default function ArrayData() {
 
     return (
         <>
+            <AddProductPopup addProduct={addProduct} />
             <section className="overflow-x-auto border-secondary border rounded-btn">
                 <table className="table">
                     <thead>
