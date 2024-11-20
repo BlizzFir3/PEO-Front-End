@@ -1,9 +1,11 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function ExempleRequete() {
     const url = 'http://localhost:3001/products';
     const [products, setProducts] = useState([]);
+
+	const formRef = useRef(null);
 
     useEffect(() => {
         const fetchData = () => {
@@ -38,7 +40,9 @@ export default function ExempleRequete() {
             // Sur notre serveur json (c'est generalement le cas sur les serveurs backend)
             // axios retournera en reponse le nouveau produit que l'on viens de creer
             .then((response) => setProducts((prev) => [...prev, response.data]))
-            .catch((error) => console.log(error.message));
+			.catch((error) => console.log(error.message));
+		
+		formRef.current.reset();
     };
 
     return (
@@ -70,7 +74,7 @@ export default function ExempleRequete() {
                 <h2 className="m-4">Ajouter un nouveau produit</h2>
                 {/* Section Formulaire */}
                 <section className="m-2 p-4 border-primary border rounded-btn">
-                    <form onSubmit={addProduct}>
+                    <form ref={formRef} onSubmit={addProduct}>
                         <section className="grid grid-cols-4 mb-5 gap-5">
                             <input
                                 type="text"

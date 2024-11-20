@@ -2,7 +2,7 @@ export default function ConsigneApi() {
     return (
         <>
             <h2>Consigne</h2>
-            <div className="p-5 border w-fit">
+            <div className="p-5 border-secondary border rounded-btn w-fit flex-col">
                 1 - Créer un tableau qui contient l'ensemble des produits en
                 BDD.
                 <br />
