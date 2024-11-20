@@ -51,6 +51,12 @@ function NavBar() {
                             <Link className="btn btn-ghost" to={'/use-effect'}>
                                 Hook Use Effect
                             </Link>
+                            <Link
+                                className="btn btn-ghost"
+                                to={'/cycle-de-vie'}
+                            >
+                                Cycle de Vie
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -77,6 +83,9 @@ function NavBar() {
                     </li>
                     <li>
                         <Link to={'/use-effect'}>Hook Use Effect</Link>
+                    </li>
+                    <li>
+                        <Link to={'/cycle-de-vie'}>Cycle de vie</Link>
                     </li>
                 </ul>
             </div>

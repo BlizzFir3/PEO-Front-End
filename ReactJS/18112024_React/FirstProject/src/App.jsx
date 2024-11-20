@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
+import CycleDeVie from './components/views/CycleDeVie';
 import Exercice from './components/views/Exercice';
 import Flux from './components/views/Flux';
 import Formulaire from './components/views/Formulaire';
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/exercice" element={<Exercice />} />
                 <Route path="/tic-tac-toe" element={<TicTacToe />} />
                 <Route path="/use-effect" element={<UseEffect />} />
+                <Route path="/cycle-de-vie" element={<CycleDeVie />} />
             </Routes>
             <Footer />
         </BrowserRouter>
