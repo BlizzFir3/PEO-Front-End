@@ -26,7 +26,7 @@ export default function ArrayData() {
 
     const addProduct = (e) => {
         e.preventDefault();
-        const formData = new FormData(e.target);
+        c
 
         const newProduct = {
             category: formData.get('category'),
@@ -56,20 +56,23 @@ export default function ArrayData() {
             });
     }
 
-	function editProduct(product) {
-		product.preventDefault();
+    function editProduct(e) {
+		e.preventDefault();
+		const formData = new FormData(e.target);
+
         const updatedProduct = {
-            id: product.id,
-            category: product.category,
-            name: product.name,
-            price: product.price,
-            number: product.number,
+            id: formData.id,
+            category: formData.category,
+            name: formData.name,
+            price: formData.price,
+            number: formData.number,
         };
-		axios
-            .put(url + '/' + product.id)
+        axios
+            .put(url + '/' + updatedProduct.id, updatedProduct)
             .then((response) =>
-                setProducts((prev) => [...prev, response.data])
-            );
+                console.log('updated product with id : ' + updatedProduct.id)
+            )
+            .catch((error) => console.log(error.message + ' id =' + updatedProduct.id + ' name: ' + updatedProduct.name + ' price =' + updatedProduct.price));
     }
 
     return (
@@ -95,7 +98,10 @@ export default function ArrayData() {
                                 <td>{product.number}</td>
                                 <td>{product.category}</td>
                                 <td>
-									<EditPopup data={product} editProduct={editProduct} />
+                                    <EditPopup
+                                        data={product}
+                                        editProduct={editProduct}
+                                    />
                                 </td>
                                 <td>
                                     <button

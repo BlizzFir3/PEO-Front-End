@@ -51,7 +51,7 @@ export default function AddProductPopup({ product = [], addProduct }) {
                     </section>
                     <button
                         type="submit"
-                        className="btn btn-outline btn-success p-4"
+                        className="btn btn-outline btn-primary p-4"
                     >
                         Ajouter le produit
                     </button>

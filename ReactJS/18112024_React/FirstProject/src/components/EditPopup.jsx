@@ -34,7 +34,7 @@ export default function EditPopup({ data, product = [], editProduct }) {
                     textAlign: 'center',
                 }}
             >
-                <form action="submit" onSubmit={editProduct}>
+                <form onSubmit={editProduct}>
                     <section className="grid grid-cols-4 mb-5 gap-5">
                         <input
                             type="text"
@@ -46,7 +46,6 @@ export default function EditPopup({ data, product = [], editProduct }) {
                         <input
                             type="number"
                             defaultValue={data.price}
-                            onChange={() => console.log('modification')}
                             placeholder="Prix"
                             name="price"
                             className="flex input input-bordered w-24 md:w-auto"
@@ -54,7 +53,6 @@ export default function EditPopup({ data, product = [], editProduct }) {
                         <input
                             type="number"
                             defaultValue={data.number}
-                            onChange={() => console.log('modification')}
                             placeholder="Quantite"
                             name="number"
                             className="flex input input-bordered w-24 md:w-auto"
@@ -62,10 +60,22 @@ export default function EditPopup({ data, product = [], editProduct }) {
                         <input
                             type="text"
                             defaultValue={data.category}
-                            onChange={() => console.log('modification')}
                             placeholder="Categorie"
                             name="category"
                             className="flex input input-bordered w-24 md:w-auto"
+                        />
+                        <input
+                            type="text"
+                            disabled
+                            defaultValue={data.id}
+                            name="id"
+                            className="flex input input-bordered w-24 md:w-auto"
+                            style={{
+                                position: 'absolute',
+                                top: '-400000px',
+                                left: '10px',
+                                cursor: 'pointer',
+                            }}
                         />
                     </section>
                     <button
