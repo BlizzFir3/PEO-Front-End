@@ -57,6 +57,9 @@ function NavBar() {
                             >
                                 Cycle de Vie
                             </Link>
+                            <Link className="btn btn-ghost" to={'/api'}>
+                                Requete API
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -86,6 +89,9 @@ function NavBar() {
                     </li>
                     <li>
                         <Link to={'/cycle-de-vie'}>Cycle de vie</Link>
+                    </li>
+                    <li>
+                        <Link to={'/api'}>Requete API</Link>
                     </li>
                 </ul>
             </div>

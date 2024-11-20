@@ -8,6 +8,7 @@ import Flux from './components/views/Flux';
 import Formulaire from './components/views/Formulaire';
 import HookUseState from './components/views/HookUseSate';
 import JsxTheorie from './components/Views/JsxTheorie';
+import RequeteAPI from './components/views/RequeteAPI';
 import TicTacToe from './components/views/TicTacToe';
 import UseEffect from './components/views/UseEffect';
 
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/tic-tac-toe" element={<TicTacToe />} />
                 <Route path="/use-effect" element={<UseEffect />} />
                 <Route path="/cycle-de-vie" element={<CycleDeVie />} />
+                <Route path="/api" element={<RequeteAPI />} />
             </Routes>
             <Footer />
         </BrowserRouter>
