@@ -56,6 +56,8 @@ export default function RequeteAPI() {
                     <strong>DELETE: </strong> http://localhost:3001/products/id
                 </li>
 			</ul>
+			
+			<h2>Tableau des produits</h2>
 			<ExempleRequete />
         </>
     );

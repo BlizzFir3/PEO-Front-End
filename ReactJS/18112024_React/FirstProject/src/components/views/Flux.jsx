@@ -51,7 +51,12 @@ const CheckBoxEnfant = ({ checked, onCheck }) => {
 
     return (
         <>
-            <input type="checkbox" onChange={handleClick} checked={checked} />
+            <input
+                type="checkbox"
+                className="checkbox checkbox-secondary"
+                onChange={handleClick}
+                checked={checked}
+            />
         </>
     );
 };
