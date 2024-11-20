@@ -5,7 +5,7 @@ import EditPopup from './EditPopup';
 
 export default function ArrayData() {
     const url = 'http://localhost:3001/products';
-	const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
         const fetchData = () => {
@@ -23,39 +23,53 @@ export default function ArrayData() {
         };
         fetchData();
     }, []);
-	
-	    const addProduct = (e) => {
-            e.preventDefault();
-            const formData = new FormData(e.target);
 
-            const newProduct = {
-                category: formData.get('category'),
-                name: formData.get('name'),
-                price: formData.get('price'),
-                number: formData.get('number'),
-            };
+    const addProduct = (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
 
-            axios
-                .post(url, newProduct)
-                .then((response) =>
-                    setProducts((prev) => [...prev, response.data])
-                )
-                .catch((error) => console.log(error.message));
-
-            formRef.current.reset();
+        const newProduct = {
+            category: formData.get('category'),
+            name: formData.get('name'),
+            price: formData.get('price'),
+            number: formData.get('number'),
         };
+
+        axios
+            .post(url, newProduct)
+            .then((response) => setProducts((prev) => [...prev, response.data]))
+            .catch((error) => console.log(error.message));
+
+        formRef.current.reset();
+    };
 
     function deleteProduct(id) {
         axios
             .delete(url + '/' + id)
             .then(() => {
-				console.log('deleted product with id : ' + id);
-				setProducts(products.filter((product) => product.id !== id));
+                console.log('deleted product with id : ' + id);
+                setProducts(products.filter((product) => product.id !== id));
             })
             .catch((error) => {
                 console.error(error.message);
                 console.error('Error deleting product : ' + id);
             });
+    }
+
+	function editProduct(product) {
+		product.preventDefault();
+        const updatedProduct = {
+            id: product.id,
+            category: product.category,
+            name: product.name,
+            price: product.price,
+            number: product.number,
+        };
+		axios
+            .put(url + '/' + product.id)
+            .then((response) =>
+                setProducts((prev) => [...prev, response.data])
+            );
     }
 
     return (
@@ -81,7 +95,7 @@ export default function ArrayData() {
                                 <td>{product.number}</td>
                                 <td>{product.category}</td>
                                 <td>
-                                    <EditPopup data={product} />
+									<EditPopup data={product} editProduct={editProduct} />
                                 </td>
                                 <td>
                                     <button

@@ -3,13 +3,12 @@ import Popup from 'reactjs-popup';
 import axios from 'axios';
 import 'reactjs-popup/dist/index.css';
 
-export default function EditPopup({ data }) {
-    function editProduct(data) {}
+export default function EditPopup({ data, product = [], editProduct }) {
     return (
         <>
             <Popup
                 trigger={
-                    <button className="btn btn-outline">
+                    <button className="btn btn-accent btn-outline">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="16"
@@ -39,32 +38,31 @@ export default function EditPopup({ data }) {
                     <section className="grid grid-cols-4 mb-5 gap-5">
                         <input
                             type="text"
-                            value={data.name}
-                            onChange={editProduct}
+                            defaultValue={data.name}
                             placeholder="Nom du Produit"
                             name="name"
                             className="flex input input-bordered w-24 md:w-auto"
                         />
                         <input
                             type="number"
-                            value={data.price}
-                            onChange={editProduct}
+                            defaultValue={data.price}
+                            onChange={() => console.log('modification')}
                             placeholder="Prix"
                             name="price"
                             className="flex input input-bordered w-24 md:w-auto"
                         />
                         <input
                             type="number"
-                            value={data.number}
-                            onChange={editProduct}
+                            defaultValue={data.number}
+                            onChange={() => console.log('modification')}
                             placeholder="Quantite"
                             name="number"
                             className="flex input input-bordered w-24 md:w-auto"
                         />
                         <input
                             type="text"
-                            value={data.category}
-                            onChange={editProduct}
+                            defaultValue={data.category}
+                            onChange={() => console.log('modification')}
                             placeholder="Categorie"
                             name="category"
                             className="flex input input-bordered w-24 md:w-auto"
