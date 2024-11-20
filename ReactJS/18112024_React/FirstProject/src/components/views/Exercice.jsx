@@ -126,8 +126,8 @@ function Exercice() {
 
 const FruitOuLegumes = ({ data }) => {
     return (
-		<>
-			<div className="overflow-x-auto">
+        <>
+            <div className="overflow-x-auto border-secondary border rounded-btn m-2 p-4">
                 <table className="table">
                     <thead>
                         <tr>
@@ -136,17 +136,17 @@ const FruitOuLegumes = ({ data }) => {
                             <th scope="col">Quantité</th>
                         </tr>
                     </thead>
-            {data.map((produit) => (
-                <tbody>
-                    <tr>
-                        <td>{produit.name}</td>
-                        <td>{produit.price}</td>
-                        <td>{produit.number}</td>
-                    </tr>
-				</tbody>
-            ))}
-			</table>
-		</div>
+                    {data.map((produit) => (
+                        <tbody>
+                            <tr>
+                                <td>{produit.name}</td>
+                                <td>{produit.price}</td>
+                                <td>{produit.number}</td>
+                            </tr>
+                        </tbody>
+                    ))}
+                </table>
+            </div>
         </>
     );
 };

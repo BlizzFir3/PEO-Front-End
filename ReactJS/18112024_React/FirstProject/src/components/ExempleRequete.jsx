@@ -45,7 +45,7 @@ export default function ExempleRequete() {
         <>
             <section>
                 <h2>Exemple avec notre JSON Server</h2>
-                <section className="overflow-x-auto">
+                <section className="overflow-x-auto border-secondary border rounded-btn">
                     <table className="table">
                         <thead>
                             <tr>
@@ -67,9 +67,9 @@ export default function ExempleRequete() {
                         </tbody>
                     </table>
                 </section>
-                <h2 className="p-3">Formulaire</h2>
+                <h2 className="m-4">Ajouter un nouveau produit</h2>
                 {/* Section Formulaire */}
-                <section className="m-2 p-4 border-primary border">
+                <section className="m-2 p-4 border-primary border rounded-btn">
                     <form onSubmit={addProduct}>
                         <section className="grid grid-cols-4 mb-5 gap-5">
                             <input
