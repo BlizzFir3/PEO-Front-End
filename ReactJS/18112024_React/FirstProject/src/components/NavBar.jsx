@@ -48,6 +48,9 @@ function NavBar() {
                             <Link className="btn btn-ghost" to={'/tic-tac-toe'}>
                                 Morpion
                             </Link>
+                            <Link className="btn btn-ghost" to={'/use-effect'}>
+                                Hook Use Effect
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -71,6 +74,9 @@ function NavBar() {
                     </li>
                     <li>
                         <Link to={'/tic-tac-toe'}>Morpion</Link>
+                    </li>
+                    <li>
+                        <Link to={'/use-effect'}>Hook Use Effect</Link>
                     </li>
                 </ul>
             </div>

@@ -1,6 +1,6 @@
 import Board from "../Board";
 
-function TicTacToe() {
+export default function TicTacToe() {
 	return (
         <>
             <h1 className="pt-20">Morpion</h1>
@@ -8,5 +8,3 @@ function TicTacToe() {
         </>
     );
 }
-
-export default TicTacToe;

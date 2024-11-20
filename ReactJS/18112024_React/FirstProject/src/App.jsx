@@ -8,23 +8,22 @@ import Formulaire from './components/views/Formulaire';
 import HookUseState from './components/views/HookUseSate';
 import JsxTheorie from './components/Views/JsxTheorie';
 import TicTacToe from './components/views/TicTacToe';
+import UseEffect from './components/views/UseEffect';
 
 function App() {
     return (
-		<BrowserRouter>
-			<NavBar/>
+        <BrowserRouter>
+            <NavBar />
             <Routes>
                 <Route path="/" element={<JsxTheorie />} />
-                <Route
-                    path="/hook-use-state"
-                    element={<HookUseState/>}
-				/>
-				<Route path='/flux' element={<Flux/>} />
-				<Route path='/formulaire' element={<Formulaire/>} />
-				<Route path='/exercice' element={<Exercice/>} />
-				<Route path='/tic-tac-toe' element={<TicTacToe/>} />
-			</Routes>
-			<Footer />
+                <Route path="/hook-use-state" element={<HookUseState />} />
+                <Route path="/flux" element={<Flux />} />
+                <Route path="/formulaire" element={<Formulaire />} />
+                <Route path="/exercice" element={<Exercice />} />
+                <Route path="/tic-tac-toe" element={<TicTacToe />} />
+                <Route path="/use-effect" element={<UseEffect />} />
+            </Routes>
+            <Footer />
         </BrowserRouter>
     );
 }
