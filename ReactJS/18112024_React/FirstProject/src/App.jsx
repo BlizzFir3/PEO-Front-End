@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import NavBar from './components/NavBar';
 import CycleDeVie from './components/views/CycleDeVie';
 import Exercice from './components/views/Exercice';
+import ExerciceApi from './components/views/ExerciceApi';
 import Flux from './components/views/Flux';
 import Formulaire from './components/views/Formulaire';
 import HookPersonnalise from './components/views/HookPersonnalise';
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/cycle-de-vie" element={<CycleDeVie />} />
                 <Route path="/api" element={<RequeteAPI />} />
                 <Route path="/hook-perso" element={<HookPersonnalise />} />
+                <Route path="/exercice-api" element={<ExerciceApi />} />
             </Routes>
             <Footer />
         </BrowserRouter>

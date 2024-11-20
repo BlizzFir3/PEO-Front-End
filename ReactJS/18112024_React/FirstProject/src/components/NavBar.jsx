@@ -63,6 +63,12 @@ function NavBar() {
                             <Link className="btn btn-ghost" to={'/hook-perso'}>
                                 Hook Personnalisé
                             </Link>
+                            <Link
+                                className="btn btn-ghost"
+                                to={'/exercice-api'}
+                            >
+                                Exercice API
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -93,14 +99,32 @@ function NavBar() {
                     <li>
                         <Link to={'/cycle-de-vie'}>Cycle de vie</Link>
                     </li>
-                    <li>
-                        <Link to={'/api'}>Requete API</Link>
-                    </li>
-                    <li>
-                        <Link to={'/hook-perso'}>Hook Personnalisé</Link>
-                    </li>
                 </ul>
             </div>
+                    <div className="flex-none navbar-center hidden lg:flex">
+                        <ul className="menu menu-horizontal px-">
+                            <li>
+                                <details>
+                                    <summary>API</summary>
+                                    <ul className="bg-base-100 rounded-t-none p-2">
+                                        <li>
+                                            <Link to={'/api'}>Requete API</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={'/hook-perso'}>
+                                                Hook Personnalisé
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to={'/exercice-api'}>
+                                                Exercice API
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </details>
+                            </li>
+                        </ul>
+                    </div>
             <div className="navbar-end">
                 <Link className="btn btn-ghost text-xl"></Link>
             </div>
