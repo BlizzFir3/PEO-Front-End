@@ -1,0 +1,48 @@
+npm create vite@latest
+npm i react-router-dom
+npm install -D tailwindcss
+npm i -D daisyui@latest
+npm install postcss autoprefixer
+
+
+Ensuite créer 2 fichiers à la racine du projet :
+tailwind.config.js   :
+
+/** @type {import('tailwindcss').Config} */
+export default {
+    content: [
+        './index.html',
+        './src/**/*.{js,ts,jsx,tsx}',
+        'node_modules/daisyui/dist/**/*.js',
+        'node_modules/react-daisyui/dist/**/*.js',
+    ],
+    theme: {
+        extend: {},
+    },
+    // eslint-disable-next-line no-undef
+    plugins: [require('daisyui')],
+    daisyui: {
+        themes: ['sunset'],
+    },
+};
+
+
+
+
+un autre :
+
+postcss.config.js   :
+
+export default {
+    plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+    },
+};
+
+
+vider le App.css et le index.css puis mettre dans index.css :
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
