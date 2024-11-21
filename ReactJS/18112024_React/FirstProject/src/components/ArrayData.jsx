@@ -25,8 +25,8 @@ export default function ArrayData() {
     }, []);
 
     const addProduct = (e) => {
-        e.preventDefault();
-        c
+		e.preventDefault();
+		const formData = new FormData(e.target);
 
         const newProduct = {
             category: formData.get('category'),
@@ -40,7 +40,7 @@ export default function ArrayData() {
             .then((response) => setProducts((prev) => [...prev, response.data]))
             .catch((error) => console.log(error.message));
 
-        formRef.current.reset();
+        // formRef.current.reset();
     };
 
     function deleteProduct(id) {

@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react';
 import Popup from 'reactjs-popup';
-import axios from 'axios';
 import 'reactjs-popup/dist/index.css';
 
 export default function EditPopup({ data, product = [], editProduct }) {
