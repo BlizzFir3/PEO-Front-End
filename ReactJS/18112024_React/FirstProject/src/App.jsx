@@ -13,6 +13,7 @@ import JsxTheorie from './components/Views/JsxTheorie';
 import RequeteAPI from './components/views/RequeteAPI';
 import TicTacToe from './components/views/TicTacToe';
 import UseEffect from './components/views/UseEffect';
+import HookUseMemo from './components/views/HookUseMemo';
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
                 <Route path="/api" element={<RequeteAPI />} />
                 <Route path="/hook-perso" element={<HookPersonnalise />} />
                 <Route path="/exercice-api" element={<ExerciceApi />} />
+                <Route path="/hook-use-memo" element={<HookUseMemo />} />
             </Routes>
             <Footer />
         </BrowserRouter>

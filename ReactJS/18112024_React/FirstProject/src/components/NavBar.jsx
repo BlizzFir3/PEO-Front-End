@@ -69,6 +69,9 @@ function NavBar() {
                             >
                                 Exercice API
                             </Link>
+                            <Link className="btn btn-ghost" to={'/hook-use-memo'}>
+                                Hook Use Memo
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -116,6 +119,9 @@ function NavBar() {
                     </li>
                     <li>
                         <Link to={'/hook-perso'}>Hook Personnalisé</Link>
+                    </li>
+                    <li>
+                        <Link to={'/hook-use-memo'}>Hook Use Memo</Link>
                     </li>
                 </ul>
             </div>

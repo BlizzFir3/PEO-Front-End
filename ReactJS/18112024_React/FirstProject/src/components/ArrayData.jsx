@@ -70,7 +70,7 @@ export default function ArrayData() {
         axios
             .put(url + '/' + updatedProduct.id, updatedProduct)
             .then((response) =>
-                console.log('updated product with id : ' + updatedProduct.id)
+                console.log('updated product with id : ' + updatedProduct.id + response)
             )
             .catch((error) => console.log(error.message + ' id =' + updatedProduct.id + ' name: ' + updatedProduct.name + ' price =' + updatedProduct.price));
     }
