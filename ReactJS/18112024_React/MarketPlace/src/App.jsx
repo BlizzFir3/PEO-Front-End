@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Products from './views/Products';
 import CounterRedux from './views/CounterRedux';
+import ProductDetail from './views/ProductDetail';
+import NotFund from './views/NotFund';
 
 function App() {
     const router = createBrowserRouter([
@@ -23,6 +25,14 @@ function App() {
                 {
                     path: '/counter-redux',
                     element: <CounterRedux />,
+                },
+                {
+                    path: '/products/:id',
+                    element: <ProductDetail />,
+                },
+                {
+                    path: '*',
+                    element: <NotFund />,
                 },
             ],
         },
