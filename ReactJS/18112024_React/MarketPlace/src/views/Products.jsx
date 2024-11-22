@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react';
-import ProductList from '../ProductList';
-import Titre from '../Titre';
-import { useAxios } from '../../hooks/useAxios';
+import ProductList from '../components/ProductList';
+import Titre from '../components/Titre';
+import { useAxios } from '../hooks/useAxios';
 
 export default function Products() {
     const [products, setProducts] = useState([]);
 
-    const { get } = useAxios();
+    const { getPaginate } = useAxios();
 
     useEffect(() => {
-        get()
+        getPaginate()
             .then((response) => {
                 setProducts(response);
             })

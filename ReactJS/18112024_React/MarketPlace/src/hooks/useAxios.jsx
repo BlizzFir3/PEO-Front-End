@@ -16,6 +16,9 @@ export const useAxios = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
+    const [page, setPage] = useState(1);
+    const [perPage, setPerPage] = useState(8);
+
     const handleRequest = async (requestFunction, ...args) => {
         setLoading(true);
         try {
@@ -37,6 +40,9 @@ export const useAxios = () => {
     const remove = (endpoint, id) =>
         handleRequest(api.delete, `${endpoint}/${id}`);
 
+    const getPaginate = () =>
+        handleRequest(api.get, `?_page=${page}&_per_page=${perPage}`);
+
     return {
         get,
         post,
@@ -44,5 +50,6 @@ export const useAxios = () => {
         remove,
         loading,
         error,
+        getPaginate,
     };
 };
