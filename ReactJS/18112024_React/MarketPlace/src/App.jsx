@@ -2,6 +2,7 @@ import './App.css';
 import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Products from './components/views/Products';
 
 function App() {
     const router = createBrowserRouter([
@@ -11,11 +12,12 @@ function App() {
             children: [
                 {
                     path: '',
+                    // eslint-disable-next-line react/no-unescaped-entities
                     element: <>Page d'accueil</>,
                 },
                 {
                     path: '/products',
-                    element: <>Page produits</>,
+                    element: <Products />,
                 },
             ],
         },
