@@ -51,5 +51,9 @@ export const useAxios = () => {
         loading,
         error,
         getPaginate,
+        setPage,
+        setPerPage,
+        page,
+        perPage,
     };
 };
