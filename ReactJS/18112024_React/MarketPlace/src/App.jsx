@@ -3,6 +3,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Products from './views/Products';
+import CounterRedux from './views/CounterRedux';
 
 function App() {
     const router = createBrowserRouter([
@@ -18,6 +19,10 @@ function App() {
                 {
                     path: '/products',
                     element: <Products />,
+                },
+                {
+                    path: '/counter-redux',
+                    element: <CounterRedux />,
                 },
             ],
         },

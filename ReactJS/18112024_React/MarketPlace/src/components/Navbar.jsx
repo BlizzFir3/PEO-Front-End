@@ -14,7 +14,7 @@ export default function Navbar() {
                     <ul className="flex items-center gap-10">
                             <HeaderItem href={"/"}>Accueil</HeaderItem>
                             <HeaderItem href={"/products"}>Nos Produits</HeaderItem>
-
+                            <HeaderItem href={"/counter-redux"}>Compteur Redux</HeaderItem>
                     </ul>
                 </section>
             </nav>
