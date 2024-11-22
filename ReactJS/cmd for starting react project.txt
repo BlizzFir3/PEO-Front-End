@@ -46,3 +46,13 @@ vider le App.css et le index.css puis mettre dans index.css :
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+Ensuite taper dans cmd :
+npm i axios
+
+et
+
+npm install @reduxjs/toolkit react-redux (si besoin de redux)
