@@ -1,27 +1,34 @@
 <template>
-    <h1 v-bind:class="classTitre">Je suis un titre {{ classTitre }}</h1>
-    <button @click="toggleColor">Changer de couleur</button>
+    <h1 :class="etat ? 'rouge' : 'bleu'">
+        Je suis un titre {{ etat ? "rouge" : "bleu" }}
+    </h1>
+    <button @click="etat = !etat">Changer de couleur</button>
     <button v-on:click="increment">Le compte est: {{ compte }}</button>
     <div @click="resetCompte" style="cursor: pointer">
         Retablir le compte a 0
     </div>
+    <p>{{ text }}</p>
+    <input v-model="text" :placeholder="placeholder" />
+    <h2>Nom Prenom</h2>
+    <input v-model="info.nom" placeholder="Entrez votre nom" />
+    <input v-model="info.prenom" placeholder="Entrez votre prenom" />
+    <button @click="console.log(info.nom, info.prenom)">
+        Envoyer les informations
+    </button>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 
 const compte = ref(0);
-const classTitre = ref("rouge");
-let etat = true;
+const etat = ref(true);
+const text = ref("");
+const placeholder = ref("Entrez du texte");
 
-const toggleColor = () => {
-    if (etat) {
-        classTitre.value = "bleu";
-    } else {
-        classTitre.value = "rouge";
-    }
-    etat = !etat;
-};
+const info = reactive({
+    npm: "",
+    prenom: "",
+});
 
 function increment() {
     compte.value++;
