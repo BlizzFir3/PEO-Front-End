@@ -1,31 +1,34 @@
 <template>
+    <h1 v-bind:class="classTitre">Je suis un titre {{ classTitre }}</h1>
+    <button @click="toggleColor">Changer de couleur</button>
     <button v-on:click="increment">Le compte est: {{ compte }}</button>
     <div @click="resetCompte" style="cursor: pointer">
         Retablir le compte a 0
     </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from "vue";
 
-export default {
-    setup() {
-        const compte = ref(0);
+const compte = ref(0);
+const classTitre = ref("rouge");
+let etat = true;
 
-        function increment() {
-            compte.value++;
-        }
+const toggleColor = () => {
+    if (etat) {
+        classTitre.value = "bleu";
+    } else {
+        classTitre.value = "rouge";
+    }
+    etat = !etat;
+};
 
-        const resetCompte = () => {
-            compte.value = 0;
-        };
+function increment() {
+    compte.value++;
+}
 
-        return {
-            compte,
-            increment,
-            resetCompte,
-        };
-    },
+const resetCompte = () => {
+    compte.value = 0;
 };
 </script>
 
@@ -37,6 +40,14 @@ header {
 .logo {
     display: block;
     margin: 0 auto 2rem;
+}
+
+.rouge {
+    color: red;
+}
+
+.bleu {
+    color: blue;
 }
 
 @media (min-width: 1024px) {
