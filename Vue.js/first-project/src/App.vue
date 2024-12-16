@@ -1,12 +1,15 @@
 <template>
-    <h1 :class="etat ? 'rouge' : 'bleu'">
+	<h1>Initiation</h1>
+	<h2>Gestion d'evenements</h2>
+    <h2 :class="etat ? 'rouge' : 'bleu'">
         Je suis un titre {{ etat ? "rouge" : "bleu" }}
-    </h1>
+    </h2>
     <button @click="etat = !etat">Changer de couleur</button>
     <button v-on:click="increment">Le compte est: {{ compte }}</button>
     <div @click="resetCompte" style="cursor: pointer">
         Retablir le compte a 0
     </div>
+	<h2>Liaisons de champs</h2>
     <p>{{ text }}</p>
     <input v-model="text" :placeholder="placeholder" />
     <h2>Nom Prenom</h2>
@@ -15,6 +18,10 @@
     <button @click="console.log(info.nom, info.prenom)">
         Envoyer les informations
     </button>
+	<h2>Manipulation du DOM</h2>
+	<button @click="affichage = !affichage">Changer l'affichage</button>
+	<h3 v-if="affichage">Je suis present dans le DOM</h3>
+	<h3 v-else>Je suis l'autre qui apparait a sa place</h3>
 </template>
 
 <script setup>
@@ -24,6 +31,7 @@ const compte = ref(0);
 const etat = ref(true);
 const text = ref("");
 const placeholder = ref("Entrez du texte");
+const affichage = ref(true);
 
 const info = reactive({
     npm: "",
