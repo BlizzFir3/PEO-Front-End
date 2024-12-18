@@ -53,6 +53,7 @@
             :disabled="hasErrors && submitted">
             S'inscrire
         </button>
+		<img src="" alt="">
     </form>
 </template>
 
